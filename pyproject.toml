@@ -1,0 +1,31 @@
+[project]
+name = "manim-mindmap"
+version = "0.1.0"
+description = "A mind map plugin for manim"
+authors = [
+    {name = "jj-math",email = "liwei.0028@163.com"}
+]
+readme = "README.md"
+license = "MIT"
+
+requires-python = ">=3.12"
+dependencies = [
+    "manim>=0.18.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/jj-math/manim-mindmap"
+Repository = "https://github.com/jj-math/manim-mindmap"
+Documentation = "https://github.com/jj-math/manim-mindmap#readme"
+"Bug Tracker" = "https://github.com/jj-math/manim-mindmap/issues"
+
+[tool.poetry]
+packages = [{include = "manim_mindmap", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0"
+pylint = "^3.0"

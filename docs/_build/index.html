@@ -1,0 +1,275 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>manim-mindmap 文档 &mdash; manim-mindmap 0.1.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=d786bb5c"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/translations.js?v=540d3cec"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="API 参考" href="api/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            manim-mindmap
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">目录</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API 参考</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/nodes.html">节点模块 (manim_mindmap.nodes)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/nodes.html#id1">类继承关系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/nodes.html#id2">节点类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/nodes.html#manim_mindmap.nodes.node.Node"><code class="docutils literal notranslate"><span class="pre">Node</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/nodes.html#id3">节点状态</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/nodes.html#manim_mindmap.nodes.node.NodeSate"><code class="docutils literal notranslate"><span class="pre">NodeSate</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/nodes.html#id4">节点样式</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/nodes.html#manim_mindmap.nodes.node.NodeStyle"><code class="docutils literal notranslate"><span class="pre">NodeStyle</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/nodes.html#id5">遍历函数</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/nodes.html#manim_mindmap.nodes.node.dfs_walker"><code class="docutils literal notranslate"><span class="pre">dfs_walker()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/nodes.html#manim_mindmap.nodes.node.bfs_walker"><code class="docutils literal notranslate"><span class="pre">bfs_walker()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/mindmap.html">思维导图模块 (manim_mindmap.mindmap)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/mindmap.html#id1">类继承关系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/mindmap.html#id2">模块架构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/mindmap.html#id3">布局类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/mindmap.html#manim_mindmap.mindmap.layout.Layout"><code class="docutils literal notranslate"><span class="pre">Layout</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/mindmap.html#id4">思维导图类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/mindmap.html#manim_mindmap.mindmap.layout.MindMap"><code class="docutils literal notranslate"><span class="pre">MindMap</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/mindmap.html#mobject">节点 Mobject</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/mindmap.html#manim_mindmap.mindmap.layout.NodeMobject"><code class="docutils literal notranslate"><span class="pre">NodeMobject</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/animations.html">动画模块 (manim_mindmap.animations)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/animations.html#id1">类继承关系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/animations.html#id2">动画类关系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/animations.html#id3">动画基类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/animations.html#manim_mindmap.animations.animations.AbstractLayoutAnimation"><code class="docutils literal notranslate"><span class="pre">AbstractLayoutAnimation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/animations.html#id4">布局动画</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/animations.html#manim_mindmap.animations.animations.LayoutAnimation"><code class="docutils literal notranslate"><span class="pre">LayoutAnimation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/animations.html#id5">插入节点</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/animations.html#manim_mindmap.animations.animations.InsertNode"><code class="docutils literal notranslate"><span class="pre">InsertNode</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/animations.html#id6">删除节点</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/animations.html#manim_mindmap.animations.animations.RemoveNode"><code class="docutils literal notranslate"><span class="pre">RemoveNode</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/animations.html#id7">缩放节点</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/animations.html#manim_mindmap.animations.animations.ScaleNode"><code class="docutils literal notranslate"><span class="pre">ScaleNode</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/animations.html#id8">替换节点</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/animations.html#manim_mindmap.animations.animations.AlterNode"><code class="docutils literal notranslate"><span class="pre">AlterNode</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/animations.html#id9">辅助函数</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/animations.html#manim_mindmap.animations.animations.animate_of_layout"><code class="docutils literal notranslate"><span class="pre">animate_of_layout()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/animations.html#manim_mindmap.animations.animations.fadeout_of_subtrees"><code class="docutils literal notranslate"><span class="pre">fadeout_of_subtrees()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/algorithms.html">算法模块 (manim_mindmap.algorithms)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/algorithms.html#id1">布局接口</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/algorithms.html#manim_mindmap.algorithms.tidy_tree.tidy_tree_layout"><code class="docutils literal notranslate"><span class="pre">tidy_tree_layout()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/algorithms.html#id2">布局算法类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/algorithms.html#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout"><code class="docutils literal notranslate"><span class="pre">TidyTreeLayout</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/algorithms.html#id3">数据结构</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/algorithms.html#manim_mindmap.algorithms.tidy_tree.WrappedTree"><code class="docutils literal notranslate"><span class="pre">WrappedTree</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/algorithms.html#manim_mindmap.algorithms.tidy_tree.IYLNode"><code class="docutils literal notranslate"><span class="pre">IYLNode</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">manim-mindmap</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">manim-mindmap 文档</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="manim-mindmap">
+<h1>manim-mindmap 文档<a class="headerlink" href="#manim-mindmap" title="链接到此标题。"></a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">manim-mindmap</span></code> 是一个基于 Manim 的思维导图插件，用于在 Manim 动画中创建和操作思维导图。</p>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">目录</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API 参考</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/nodes.html">节点模块 (manim_mindmap.nodes)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/mindmap.html">思维导图模块 (manim_mindmap.mindmap)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/animations.html">动画模块 (manim_mindmap.animations)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/algorithms.html">算法模块 (manim_mindmap.algorithms)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="id1">
+<h1>快速开始<a class="headerlink" href="#id1" title="链接到此标题。"></a></h1>
+<section id="id2">
+<h2>安装<a class="headerlink" href="#id2" title="链接到此标题。"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>manim-mindmap
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h2>基本用法<a class="headerlink" href="#id3" title="链接到此标题。"></a></h2>
+<p>使用字典定义思维导图结构，然后创建 <code class="docutils literal notranslate"><span class="pre">MindMap</span></code> 对象：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">manim_mindmap</span><span class="w"> </span><span class="kn">import</span> <span class="n">MindMap</span><span class="p">,</span> <span class="n">NodeStyle</span>
+
+<span class="n">mindmap_data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;node&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;根节点&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;child&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s1">&#39;node&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;子节点1&#39;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">&#39;node&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;子节点2&#39;</span><span class="p">,</span> <span class="s1">&#39;child&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span><span class="s1">&#39;node&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;孙节点1&#39;</span><span class="p">},</span>
+        <span class="p">]},</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">mind</span> <span class="o">=</span> <span class="n">MindMap</span><span class="p">(</span><span class="n">mindmap_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h2>核心概念<a class="headerlink" href="#id4" title="链接到此标题。"></a></h2>
+<ul class="simple">
+<li><p><strong>Node</strong>: 树节点类，表示思维导图中的一个节点</p></li>
+<li><p><strong>NodeStyle</strong>: 节点样式配置，控制布局方向、间距、颜色等</p></li>
+<li><p><strong>MindMap</strong>: 思维导图主类，解析字典数据并生成可视化对象</p></li>
+<li><p><strong>Layout</strong>: 布局类，使用 Tidy Tree 算法计算节点位置</p></li>
+<li><p><strong>动画类</strong>: <code class="docutils literal notranslate"><span class="pre">LayoutAnimation</span></code>, <code class="docutils literal notranslate"><span class="pre">InsertNode</span></code>, <code class="docutils literal notranslate"><span class="pre">RemoveNode</span></code>, <code class="docutils literal notranslate"><span class="pre">ScaleNode</span></code>, <code class="docutils literal notranslate"><span class="pre">AlterNode</span></code></p></li>
+</ul>
+</section>
+<section id="id5">
+<h2>整体架构<a class="headerlink" href="#id5" title="链接到此标题。"></a></h2>
+<div class="graphviz"><object data="_images/graphviz-490e6267edfd017ff8ebad0e24345e66e6ef596d.svg" type="image/svg+xml" class="graphviz">
+<p class="warning">digraph overview {
+   rankdir=TB;
+   node [shape=box, style=&quot;rounded,filled&quot;, fillcolor=&quot;#e8f4fd&quot;, fontsize=11];
+   edge [fontsize=9];
+   &quot;MindMap&quot; -&gt; &quot;NodeStyle&quot; [label=&quot;style&quot;];
+   &quot;MindMap&quot; -&gt; &quot;Layout&quot; [label=&quot;layout&quot;];
+   &quot;Layout&quot; -&gt; &quot;TidyTreeLayout&quot; [label=&quot;algo&quot;];
+   &quot;TidyTreeLayout&quot; -&gt; &quot;WrappedTree&quot; [label=&quot;wrap&quot;];
+   &quot;MindMap&quot; -&gt; &quot;Node&quot; [label=&quot;build&quot;];
+   &quot;InsertNode&quot; -&gt; &quot;Node&quot; [label=&quot;insert&quot;];
+   &quot;RemoveNode&quot; -&gt; &quot;Node&quot; [label=&quot;remove&quot;];
+   &quot;ScaleNode&quot; -&gt; &quot;Node&quot; [label=&quot;scale&quot;];
+   &quot;AlterNode&quot; -&gt; &quot;Node&quot; [label=&quot;alter&quot;];
+}</p></object></div>
+</section>
+</section>
+<section id="id6">
+<h1>索引<a class="headerlink" href="#id6" title="链接到此标题。"></a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">索引</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">模块索引</span></a></p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="api/index.html" class="btn btn-neutral float-right" title="API 参考" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2026, jj-math。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

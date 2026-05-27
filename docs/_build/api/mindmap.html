@@ -1,0 +1,372 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>思维导图模块 (manim_mindmap.mindmap) &mdash; manim-mindmap 0.1.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=d786bb5c"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=540d3cec"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="动画模块 (manim_mindmap.animations)" href="animations.html" />
+    <link rel="prev" title="节点模块 (manim_mindmap.nodes)" href="nodes.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            manim-mindmap
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">目录</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API 参考</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="nodes.html">节点模块 (manim_mindmap.nodes)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nodes.html#id1">类继承关系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nodes.html#id2">节点类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nodes.html#manim_mindmap.nodes.node.Node"><code class="docutils literal notranslate"><span class="pre">Node</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="nodes.html#id3">节点状态</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nodes.html#manim_mindmap.nodes.node.NodeSate"><code class="docutils literal notranslate"><span class="pre">NodeSate</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="nodes.html#id4">节点样式</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nodes.html#manim_mindmap.nodes.node.NodeStyle"><code class="docutils literal notranslate"><span class="pre">NodeStyle</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="nodes.html#id5">遍历函数</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nodes.html#manim_mindmap.nodes.node.dfs_walker"><code class="docutils literal notranslate"><span class="pre">dfs_walker()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nodes.html#manim_mindmap.nodes.node.bfs_walker"><code class="docutils literal notranslate"><span class="pre">bfs_walker()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">思维导图模块 (manim_mindmap.mindmap)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">类继承关系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">模块架构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">布局类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#manim_mindmap.mindmap.layout.Layout"><code class="docutils literal notranslate"><span class="pre">Layout</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">思维导图类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#manim_mindmap.mindmap.layout.MindMap"><code class="docutils literal notranslate"><span class="pre">MindMap</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#mobject">节点 Mobject</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#manim_mindmap.mindmap.layout.NodeMobject"><code class="docutils literal notranslate"><span class="pre">NodeMobject</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="animations.html">动画模块 (manim_mindmap.animations)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="animations.html#id1">类继承关系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="animations.html#id2">动画类关系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="animations.html#id3">动画基类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="animations.html#manim_mindmap.animations.animations.AbstractLayoutAnimation"><code class="docutils literal notranslate"><span class="pre">AbstractLayoutAnimation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="animations.html#id4">布局动画</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="animations.html#manim_mindmap.animations.animations.LayoutAnimation"><code class="docutils literal notranslate"><span class="pre">LayoutAnimation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="animations.html#id5">插入节点</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="animations.html#manim_mindmap.animations.animations.InsertNode"><code class="docutils literal notranslate"><span class="pre">InsertNode</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="animations.html#id6">删除节点</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="animations.html#manim_mindmap.animations.animations.RemoveNode"><code class="docutils literal notranslate"><span class="pre">RemoveNode</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="animations.html#id7">缩放节点</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="animations.html#manim_mindmap.animations.animations.ScaleNode"><code class="docutils literal notranslate"><span class="pre">ScaleNode</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="animations.html#id8">替换节点</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="animations.html#manim_mindmap.animations.animations.AlterNode"><code class="docutils literal notranslate"><span class="pre">AlterNode</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="animations.html#id9">辅助函数</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="animations.html#manim_mindmap.animations.animations.animate_of_layout"><code class="docutils literal notranslate"><span class="pre">animate_of_layout()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="animations.html#manim_mindmap.animations.animations.fadeout_of_subtrees"><code class="docutils literal notranslate"><span class="pre">fadeout_of_subtrees()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="algorithms.html">算法模块 (manim_mindmap.algorithms)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="algorithms.html#id1">布局接口</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="algorithms.html#manim_mindmap.algorithms.tidy_tree.tidy_tree_layout"><code class="docutils literal notranslate"><span class="pre">tidy_tree_layout()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="algorithms.html#id2">布局算法类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="algorithms.html#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout"><code class="docutils literal notranslate"><span class="pre">TidyTreeLayout</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="algorithms.html#id3">数据结构</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="algorithms.html#manim_mindmap.algorithms.tidy_tree.WrappedTree"><code class="docutils literal notranslate"><span class="pre">WrappedTree</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="algorithms.html#manim_mindmap.algorithms.tidy_tree.IYLNode"><code class="docutils literal notranslate"><span class="pre">IYLNode</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">manim-mindmap</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">API 参考</a></li>
+      <li class="breadcrumb-item active">思维导图模块 (manim_mindmap.mindmap)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/mindmap.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="manim-mindmap-mindmap">
+<h1>思维导图模块 (manim_mindmap.mindmap)<a class="headerlink" href="#manim-mindmap-mindmap" title="链接到此标题。"></a></h1>
+<p>该模块定义了思维导图的核心类：布局类和思维导图主类。</p>
+<section id="id1">
+<h2>类继承关系<a class="headerlink" href="#id1" title="链接到此标题。"></a></h2>
+<div class="graphviz"><object data="../_images/inheritance-8b332591c166688572e1947f499a037a07c124d4.svg" type="image/svg+xml" class="inheritance graphviz">
+<p class="warning">Inheritance diagram of manim_mindmap.mindmap.layout.MindMap, manim_mindmap.mindmap.layout.Layout</p></object></div>
+</section>
+<section id="id2">
+<h2>模块架构<a class="headerlink" href="#id2" title="链接到此标题。"></a></h2>
+<div class="graphviz"><object data="../_images/graphviz-76b42ad16e68d646e6177818a201a33ede79b016.svg" type="image/svg+xml" class="graphviz">
+<p class="warning">digraph mindmap_arch {
+   rankdir=LR;
+   node [shape=box, style=&quot;rounded,filled&quot;, fillcolor=&quot;#f8f8f8&quot;, fontsize=11];
+   &quot;MindMap&quot; -&gt; &quot;Layout&quot; [label=&quot;use&quot;];
+   &quot;MindMap&quot; -&gt; &quot;NodeStyle&quot; [label=&quot;config&quot;];
+   &quot;Layout&quot; -&gt; &quot;tidy_tree_layout&quot; [label=&quot;call&quot;];
+   &quot;tidy_tree_layout&quot; -&gt; &quot;TidyTreeLayout&quot; [label=&quot;impl&quot;];
+}</p></object></div>
+</section>
+<section id="id3">
+<h2>布局类<a class="headerlink" href="#id3" title="链接到此标题。"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="manim_mindmap.mindmap.layout.Layout">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">manim_mindmap.mindmap.layout.</span></span><span class="sig-name descname"><span class="pre">Layout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nodes.html#manim_mindmap.nodes.node.Node" title="manim_mindmap.nodes.node.Node"><span class="pre">Node</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">array([0.,</span> <span class="pre">-1.,</span> <span class="pre">0.])</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level_spacing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_spacing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/manim_mindmap/mindmap/layout.html#Layout"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.mindmap.layout.Layout" title="链接到此定义。"></a></dt>
+<dd><p>基类：<a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(位于 Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>基础布局类</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="manim_mindmap.mindmap.layout.Layout.do_layout">
+<span class="sig-name descname"><span class="pre">do_layout</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="nodes.html#manim_mindmap.nodes.node.Node" title="manim_mindmap.nodes.node.Node"><span class="pre">Node</span></a></span></span><a class="reference internal" href="../_modules/manim_mindmap/mindmap/layout.html#Layout.do_layout"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.mindmap.layout.Layout.do_layout" title="链接到此定义。"></a></dt>
+<dd><p>执行布局计算</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="id4">
+<h2>思维导图类<a class="headerlink" href="#id4" title="链接到此标题。"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="manim_mindmap.mindmap.layout.MindMap">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">manim_mindmap.mindmap.layout.</span></span><span class="sig-name descname"><span class="pre">MindMap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(位于 Python v3.14)"><span class="pre">Dict</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buff</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_style</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nodes.html#manim_mindmap.nodes.node.NodeStyle" title="manim_mindmap.nodes.node.NodeStyle"><span class="pre">NodeStyle</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">&lt;manim_mindmap.nodes.node.NodeStyle</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/manim_mindmap/mindmap/layout.html#MindMap"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.mindmap.layout.MindMap" title="链接到此定义。"></a></dt>
+<dd><p>基类：<a class="reference external" href="https://docs.manim.community/en/stable/reference/manim.mobject.mobject.Group.html#manim.mobject.mobject.Group" title="（在 Manim）"><code class="xref py py-class docutils literal notranslate"><span class="pre">Group</span></code></a></p>
+<p>思维导图类: 解析如下格式的思维导图数据,并生成对应的思维导图对象</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mindmap</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;node&#39;</span><span class="p">:</span><span class="sa">r</span><span class="s1">&#39;球体积&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;text&#39;</span><span class="p">:</span><span class="s1">&#39;用于TTS讲解的文本&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;child&#39;</span><span class="p">:[</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;node&#39;</span><span class="p">:</span><span class="sa">r</span><span class="s1">&#39;公元前3世纪&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;child&#39;</span><span class="p">:[</span>
+                <span class="p">{</span><span class="s1">&#39;node&#39;</span><span class="p">:</span><span class="sa">r</span><span class="s1">&#39;阿基米德平衡法&#39;</span><span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;node&#39;</span><span class="p">:</span><span class="sa">r</span><span class="s1">&#39;公元3世纪&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;child&#39;</span><span class="p">:[</span>
+                <span class="p">{</span><span class="s1">&#39;node&#39;</span><span class="p">:</span><span class="sa">r</span><span class="s1">&#39;《九章算术》&#39;</span><span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s1">&#39;node&#39;</span><span class="p">:</span><span class="sa">r</span><span class="s1">&#39;刘徽：牟合方盖&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;child&#39;</span><span class="p">:[</span>
+                        <span class="p">{</span><span class="s1">&#39;node&#39;</span><span class="p">:</span><span class="sa">r</span><span class="s1">&#39;球与牟合方盖的关系&#39;</span><span class="p">},</span>
+                        <span class="p">{</span><span class="s1">&#39;node&#39;</span><span class="p">:</span><span class="sa">r</span><span class="s1">&#39;牟合方盖体积？&#39;</span><span class="p">}</span>
+                    <span class="p">]</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">},</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+<span class="n">mind</span> <span class="o">=</span> <span class="n">MindMap</span><span class="p">(</span><span class="n">mindmap</span><span class="p">)</span>
+<span class="n">mind</span><span class="o">.</span><span class="n">scale_to_fit_width</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="n">FadeIn</span><span class="p">(</span><span class="n">mind</span><span class="p">))</span>
+</pre></div>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="manim_mindmap.mindmap.layout.MindMap.animation_overrides">
+<span class="sig-name descname"><span class="pre">animation_overrides</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></span><a class="headerlink" href="#manim_mindmap.mindmap.layout.MindMap.animation_overrides" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="manim_mindmap.mindmap.layout.MindMap.bfs_walker">
+<span class="sig-name descname"><span class="pre">bfs_walker</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Generator" title="(位于 Python v3.14)"><span class="pre">Generator</span></a></span></span><a class="reference internal" href="../_modules/manim_mindmap/mindmap/layout.html#MindMap.bfs_walker"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.mindmap.layout.MindMap.bfs_walker" title="链接到此定义。"></a></dt>
+<dd><p>广度优先遍历</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="manim_mindmap.mindmap.layout.MindMap.custom_walker">
+<span class="sig-name descname"><span class="pre">custom_walker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(位于 Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(位于 Python v3.14)"><span class="pre">tuple</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Generator" title="(位于 Python v3.14)"><span class="pre">Generator</span></a></span></span><a class="reference internal" href="../_modules/manim_mindmap/mindmap/layout.html#MindMap.custom_walker"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.mindmap.layout.MindMap.custom_walker" title="链接到此定义。"></a></dt>
+<dd><p>自定义遍历</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="manim_mindmap.mindmap.layout.MindMap.dfs_walker">
+<span class="sig-name descname"><span class="pre">dfs_walker</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Generator" title="(位于 Python v3.14)"><span class="pre">Generator</span></a></span></span><a class="reference internal" href="../_modules/manim_mindmap/mindmap/layout.html#MindMap.dfs_walker"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.mindmap.layout.MindMap.dfs_walker" title="链接到此定义。"></a></dt>
+<dd><p>深度优先遍历</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="manim_mindmap.mindmap.layout.MindMap.get_all_mindmap">
+<span class="sig-name descname"><span class="pre">get_all_mindmap</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.manim.community/en/stable/reference/manim.mobject.mobject.Group.html#manim.mobject.mobject.Group" title="（在 Manim）"><span class="pre">Group</span></a></span></span><a class="reference internal" href="../_modules/manim_mindmap/mindmap/layout.html#MindMap.get_all_mindmap"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.mindmap.layout.MindMap.get_all_mindmap" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="manim_mindmap.mindmap.layout.MindMap.get_children">
+<span class="sig-name descname"><span class="pre">get_children</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ID</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.manim.community/en/stable/reference/manim.mobject.mobject.Group.html#manim.mobject.mobject.Group" title="（在 Manim）"><span class="pre">Group</span></a></span></span><a class="reference internal" href="../_modules/manim_mindmap/mindmap/layout.html#MindMap.get_children"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.mindmap.layout.MindMap.get_children" title="链接到此定义。"></a></dt>
+<dd><p>获取节点的子节点</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="manim_mindmap.mindmap.layout.MindMap.get_connector">
+<span class="sig-name descname"><span class="pre">get_connector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ID</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.manim.community/en/stable/reference/manim.mobject.geometry.line.Line.html#manim.mobject.geometry.line.Line" title="（在 Manim）"><span class="pre">Line</span></a></span></span><a class="reference internal" href="../_modules/manim_mindmap/mindmap/layout.html#MindMap.get_connector"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.mindmap.layout.MindMap.get_connector" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="manim_mindmap.mindmap.layout.MindMap.get_descendants">
+<span class="sig-name descname"><span class="pre">get_descendants</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ID</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.manim.community/en/stable/reference/manim.mobject.mobject.Group.html#manim.mobject.mobject.Group" title="（在 Manim）"><span class="pre">Group</span></a></span></span><a class="reference internal" href="../_modules/manim_mindmap/mindmap/layout.html#MindMap.get_descendants"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.mindmap.layout.MindMap.get_descendants" title="链接到此定义。"></a></dt>
+<dd><p>获取节点的后代</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="manim_mindmap.mindmap.layout.MindMap.get_node">
+<span class="sig-name descname"><span class="pre">get_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ID</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.manim.community/en/stable/reference/manim.mobject.mobject.Group.html#manim.mobject.mobject.Group" title="（在 Manim）"><span class="pre">Group</span></a></span></span><a class="reference internal" href="../_modules/manim_mindmap/mindmap/layout.html#MindMap.get_node"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.mindmap.layout.MindMap.get_node" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="manim_mindmap.mindmap.layout.MindMap.get_node_component">
+<span class="sig-name descname"><span class="pre">get_node_component</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ID</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#manim_mindmap.mindmap.layout.NodeMobject" title="manim_mindmap.mindmap.layout.NodeMobject"><span class="pre">NodeMobject</span></a></span></span><a class="reference internal" href="../_modules/manim_mindmap/mindmap/layout.html#MindMap.get_node_component"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.mindmap.layout.MindMap.get_node_component" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="manim_mindmap.mindmap.layout.MindMap.get_submindmap">
+<span class="sig-name descname"><span class="pre">get_submindmap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ID</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.manim.community/en/stable/reference/manim.mobject.mobject.Group.html#manim.mobject.mobject.Group" title="（在 Manim）"><span class="pre">Group</span></a></span></span><a class="reference internal" href="../_modules/manim_mindmap/mindmap/layout.html#MindMap.get_submindmap"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.mindmap.layout.MindMap.get_submindmap" title="链接到此定义。"></a></dt>
+<dd><p>获取以节点 ID 为根的子树</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="manim_mindmap.mindmap.layout.MindMap.get_text">
+<span class="sig-name descname"><span class="pre">get_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ID</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(位于 Python v3.14)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/manim_mindmap/mindmap/layout.html#MindMap.get_text"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.mindmap.layout.MindMap.get_text" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="mobject">
+<h2>节点 Mobject<a class="headerlink" href="#mobject" title="链接到此标题。"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="manim_mindmap.mindmap.layout.NodeMobject">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">manim_mindmap.mindmap.layout.</span></span><span class="sig-name descname"><span class="pre">NodeMobject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vmobject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.manim.community/en/stable/reference/manim.mobject.types.vectorized_mobject.VMobject.html#manim.mobject.types.vectorized_mobject.VMobject" title="（在 Manim）"><span class="pre">VMobject</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">surr_rect</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.manim.community/en/stable/reference/manim.mobject.geometry.polygram.Rectangle.html#manim.mobject.geometry.polygram.Rectangle" title="（在 Manim）"><span class="pre">Rectangle</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">connector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.manim.community/en/stable/reference/manim.mobject.geometry.line.Line.html#manim.mobject.geometry.line.Line" title="（在 Manim）"><span class="pre">Line</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(位于 Python v3.14)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/manim_mindmap/mindmap/layout.html#NodeMobject"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.mindmap.layout.NodeMobject" title="链接到此定义。"></a></dt>
+<dd><p>基类：<a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(位于 Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="manim_mindmap.mindmap.layout.NodeMobject.connector">
+<span class="sig-name descname"><span class="pre">connector</span></span><a class="headerlink" href="#manim_mindmap.mindmap.layout.NodeMobject.connector" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="manim_mindmap.mindmap.layout.NodeMobject.surr_rect">
+<span class="sig-name descname"><span class="pre">surr_rect</span></span><a class="headerlink" href="#manim_mindmap.mindmap.layout.NodeMobject.surr_rect" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="manim_mindmap.mindmap.layout.NodeMobject.text">
+<span class="sig-name descname"><span class="pre">text</span></span><a class="headerlink" href="#manim_mindmap.mindmap.layout.NodeMobject.text" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="manim_mindmap.mindmap.layout.NodeMobject.vmobject">
+<span class="sig-name descname"><span class="pre">vmobject</span></span><a class="headerlink" href="#manim_mindmap.mindmap.layout.NodeMobject.vmobject" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="nodes.html" class="btn btn-neutral float-left" title="节点模块 (manim_mindmap.nodes)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="animations.html" class="btn btn-neutral float-right" title="动画模块 (manim_mindmap.animations)" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2026, jj-math。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

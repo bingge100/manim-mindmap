@@ -1,0 +1,469 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>算法模块 (manim_mindmap.algorithms) &mdash; manim-mindmap 0.1.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=d786bb5c"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=540d3cec"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="prev" title="动画模块 (manim_mindmap.animations)" href="animations.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            manim-mindmap
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">目录</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API 参考</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="nodes.html">节点模块 (manim_mindmap.nodes)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nodes.html#id1">类继承关系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nodes.html#id2">节点类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nodes.html#manim_mindmap.nodes.node.Node"><code class="docutils literal notranslate"><span class="pre">Node</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="nodes.html#id3">节点状态</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nodes.html#manim_mindmap.nodes.node.NodeSate"><code class="docutils literal notranslate"><span class="pre">NodeSate</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="nodes.html#id4">节点样式</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nodes.html#manim_mindmap.nodes.node.NodeStyle"><code class="docutils literal notranslate"><span class="pre">NodeStyle</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="nodes.html#id5">遍历函数</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nodes.html#manim_mindmap.nodes.node.dfs_walker"><code class="docutils literal notranslate"><span class="pre">dfs_walker()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nodes.html#manim_mindmap.nodes.node.bfs_walker"><code class="docutils literal notranslate"><span class="pre">bfs_walker()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mindmap.html">思维导图模块 (manim_mindmap.mindmap)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mindmap.html#id1">类继承关系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mindmap.html#id2">模块架构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mindmap.html#id3">布局类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="mindmap.html#manim_mindmap.mindmap.layout.Layout"><code class="docutils literal notranslate"><span class="pre">Layout</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mindmap.html#id4">思维导图类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="mindmap.html#manim_mindmap.mindmap.layout.MindMap"><code class="docutils literal notranslate"><span class="pre">MindMap</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mindmap.html#mobject">节点 Mobject</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="mindmap.html#manim_mindmap.mindmap.layout.NodeMobject"><code class="docutils literal notranslate"><span class="pre">NodeMobject</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="animations.html">动画模块 (manim_mindmap.animations)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="animations.html#id1">类继承关系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="animations.html#id2">动画类关系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="animations.html#id3">动画基类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="animations.html#manim_mindmap.animations.animations.AbstractLayoutAnimation"><code class="docutils literal notranslate"><span class="pre">AbstractLayoutAnimation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="animations.html#id4">布局动画</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="animations.html#manim_mindmap.animations.animations.LayoutAnimation"><code class="docutils literal notranslate"><span class="pre">LayoutAnimation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="animations.html#id5">插入节点</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="animations.html#manim_mindmap.animations.animations.InsertNode"><code class="docutils literal notranslate"><span class="pre">InsertNode</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="animations.html#id6">删除节点</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="animations.html#manim_mindmap.animations.animations.RemoveNode"><code class="docutils literal notranslate"><span class="pre">RemoveNode</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="animations.html#id7">缩放节点</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="animations.html#manim_mindmap.animations.animations.ScaleNode"><code class="docutils literal notranslate"><span class="pre">ScaleNode</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="animations.html#id8">替换节点</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="animations.html#manim_mindmap.animations.animations.AlterNode"><code class="docutils literal notranslate"><span class="pre">AlterNode</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="animations.html#id9">辅助函数</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="animations.html#manim_mindmap.animations.animations.animate_of_layout"><code class="docutils literal notranslate"><span class="pre">animate_of_layout()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="animations.html#manim_mindmap.animations.animations.fadeout_of_subtrees"><code class="docutils literal notranslate"><span class="pre">fadeout_of_subtrees()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">算法模块 (manim_mindmap.algorithms)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">布局接口</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.tidy_tree_layout"><code class="docutils literal notranslate"><span class="pre">tidy_tree_layout()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">布局算法类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout"><code class="docutils literal notranslate"><span class="pre">TidyTreeLayout</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">数据结构</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree"><code class="docutils literal notranslate"><span class="pre">WrappedTree</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.IYLNode"><code class="docutils literal notranslate"><span class="pre">IYLNode</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">manim-mindmap</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">API 参考</a></li>
+      <li class="breadcrumb-item active">算法模块 (manim_mindmap.algorithms)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/algorithms.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="manim-mindmap-algorithms">
+<h1>算法模块 (manim_mindmap.algorithms)<a class="headerlink" href="#manim-mindmap-algorithms" title="链接到此标题。"></a></h1>
+<p>该模块实现了非分层整洁树布局算法（Tidy Tree Layout），用于计算树形结构的节点位置。</p>
+<p>算法参考：<em>Improving Walker's Algorithm to Run in Linear Time</em></p>
+<section id="id1">
+<h2>布局接口<a class="headerlink" href="#id1" title="链接到此标题。"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.tidy_tree_layout">
+<span class="sig-prename descclassname"><span class="pre">manim_mindmap.algorithms.tidy_tree.</span></span><span class="sig-name descname"><span class="pre">tidy_tree_layout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(位于 Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'down'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_spacing</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level_spacing</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/manim_mindmap/algorithms/tidy_tree.html#tidy_tree_layout"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.tidy_tree_layout" title="链接到此定义。"></a></dt>
+<dd><p>对树形结构进行整洁布局函数接口</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>root</strong> -- 根节点，需要包含以下属性：
+- width: 节点宽度
+- height: 节点高度
+- children: 子节点列表
+- x, y: 布局后的坐标（会被修改）</p></li>
+<li><p><strong>direction</strong> -- 布局方向，可选 &quot;down&quot;, &quot;up&quot;, &quot;left&quot;, &quot;right&quot;，默认 &quot;down&quot;</p></li>
+<li><p><strong>node_spacing</strong> -- 兄弟节点间距,默认0.5</p></li>
+<li><p><strong>level_spacing</strong> -- 层级节点间距,默认0.5</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>修改后的根节点(x, y 已被设置)</p>
+</dd>
+<dt class="field-odd">返回类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>root</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="id2">
+<h2>布局算法类<a class="headerlink" href="#id2" title="链接到此标题。"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.TidyTreeLayout">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">manim_mindmap.algorithms.tidy_tree.</span></span><span class="sig-name descname"><span class="pre">TidyTreeLayout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(位于 Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'right'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_spacing</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level_spacing</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/manim_mindmap/algorithms/tidy_tree.html#TidyTreeLayout"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout" title="链接到此定义。"></a></dt>
+<dd><p>基类：<a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(位于 Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>非分层整洁树布局算法</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.add_child_spacing">
+<span class="sig-name descname"><span class="pre">add_child_spacing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="manim_mindmap.algorithms.tidy_tree.WrappedTree"><span class="pre">WrappedTree</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/manim_mindmap/algorithms/tidy_tree.html#TidyTreeLayout.add_child_spacing"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.add_child_spacing" title="链接到此定义。"></a></dt>
+<dd><p>添加子节点间距</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.bottom">
+<span class="sig-name descname"><span class="pre">bottom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="manim_mindmap.algorithms.tidy_tree.WrappedTree"><span class="pre">WrappedTree</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/manim_mindmap/algorithms/tidy_tree.html#TidyTreeLayout.bottom"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.bottom" title="链接到此定义。"></a></dt>
+<dd><p>返回节点在正交方向上的高度</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.distribute_extra">
+<span class="sig-name descname"><span class="pre">distribute_extra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="manim_mindmap.algorithms.tidy_tree.WrappedTree"><span class="pre">WrappedTree</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">si</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/manim_mindmap/algorithms/tidy_tree.html#TidyTreeLayout.distribute_extra"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.distribute_extra" title="链接到此定义。"></a></dt>
+<dd><p>分配额外间距</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.first_walk">
+<span class="sig-name descname"><span class="pre">first_walk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="manim_mindmap.algorithms.tidy_tree.WrappedTree"><span class="pre">WrappedTree</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/manim_mindmap/algorithms/tidy_tree.html#TidyTreeLayout.first_walk"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.first_walk" title="链接到此定义。"></a></dt>
+<dd><p>第一次遍历：
+计算每个节点的 prelim(初步相对位置)和 mod(修饰偏移),检测并消除子树间的重叠</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.layout">
+<span class="sig-name descname"><span class="pre">layout</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/manim_mindmap/algorithms/tidy_tree.html#TidyTreeLayout.layout"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.layout" title="链接到此定义。"></a></dt>
+<dd><p>执行布局计算</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.move_subtree">
+<span class="sig-name descname"><span class="pre">move_subtree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="manim_mindmap.algorithms.tidy_tree.WrappedTree"><span class="pre">WrappedTree</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">si</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/manim_mindmap/algorithms/tidy_tree.html#TidyTreeLayout.move_subtree"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.move_subtree" title="链接到此定义。"></a></dt>
+<dd><p>移动子树</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.next_left_contour">
+<span class="sig-name descname"><span class="pre">next_left_contour</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="manim_mindmap.algorithms.tidy_tree.WrappedTree"><span class="pre">WrappedTree</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="manim_mindmap.algorithms.tidy_tree.WrappedTree"><span class="pre">WrappedTree</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(位于 Python v3.14)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/manim_mindmap/algorithms/tidy_tree.html#TidyTreeLayout.next_left_contour"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.next_left_contour" title="链接到此定义。"></a></dt>
+<dd><p>获取下一个左轮廓节点</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.next_right_contour">
+<span class="sig-name descname"><span class="pre">next_right_contour</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="manim_mindmap.algorithms.tidy_tree.WrappedTree"><span class="pre">WrappedTree</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="manim_mindmap.algorithms.tidy_tree.WrappedTree"><span class="pre">WrappedTree</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(位于 Python v3.14)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/manim_mindmap/algorithms/tidy_tree.html#TidyTreeLayout.next_right_contour"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.next_right_contour" title="链接到此定义。"></a></dt>
+<dd><p>获取下一个右轮廓节点</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.position_root">
+<span class="sig-name descname"><span class="pre">position_root</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="manim_mindmap.algorithms.tidy_tree.WrappedTree"><span class="pre">WrappedTree</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/manim_mindmap/algorithms/tidy_tree.html#TidyTreeLayout.position_root"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.position_root" title="链接到此定义。"></a></dt>
+<dd><p>放置子树 t 根节点: 将其放置在子节点的正中间</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.second_walk">
+<span class="sig-name descname"><span class="pre">second_walk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="manim_mindmap.algorithms.tidy_tree.WrappedTree"><span class="pre">WrappedTree</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">modsum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/manim_mindmap/algorithms/tidy_tree.html#TidyTreeLayout.second_walk"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.second_walk" title="链接到此定义。"></a></dt>
+<dd><p>第二次遍历：
+将 prelim 和 mod 累加到最终绝对非层级的坐标 x 或 y 上</p>
+<dl class="simple">
+<dt>参数:</dt><dd><p>modsum: 从根到当前路径上所有祖先 mod 值的总和</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.separate">
+<span class="sig-name descname"><span class="pre">separate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="manim_mindmap.algorithms.tidy_tree.WrappedTree"><span class="pre">WrappedTree</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">ih</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.IYLNode" title="manim_mindmap.algorithms.tidy_tree.IYLNode"><span class="pre">IYLNode</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(位于 Python v3.14)"><span class="pre">None</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/manim_mindmap/algorithms/tidy_tree.html#TidyTreeLayout.separate"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.separate" title="链接到此定义。"></a></dt>
+<dd><p>算法核心: 分离第i个子树与前面子树,确保不重叠</p>
+<dl class="simple">
+<dt>参数:</dt><dd><p>t (WrappedTree): 父节点
+i (int): 当前子树索引
+ih (Optional[IYLNode]): 那些&quot;右轮廓还暴露在外、可能先与第 i 个子树发生碰撞&quot;的前序子树</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.set_extremes">
+<span class="sig-name descname"><span class="pre">set_extremes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="manim_mindmap.algorithms.tidy_tree.WrappedTree"><span class="pre">WrappedTree</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/manim_mindmap/algorithms/tidy_tree.html#TidyTreeLayout.set_extremes"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.set_extremes" title="链接到此定义。"></a></dt>
+<dd><p>设置极值节点</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.set_left_thread">
+<span class="sig-name descname"><span class="pre">set_left_thread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="manim_mindmap.algorithms.tidy_tree.WrappedTree"><span class="pre">WrappedTree</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">cl</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="manim_mindmap.algorithms.tidy_tree.WrappedTree"><span class="pre">WrappedTree</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">modsumcl</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/manim_mindmap/algorithms/tidy_tree.html#TidyTreeLayout.set_left_thread"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.set_left_thread" title="链接到此定义。"></a></dt>
+<dd><p>设置左线程</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.set_right_thread">
+<span class="sig-name descname"><span class="pre">set_right_thread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="manim_mindmap.algorithms.tidy_tree.WrappedTree"><span class="pre">WrappedTree</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">sr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="manim_mindmap.algorithms.tidy_tree.WrappedTree"><span class="pre">WrappedTree</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">modsumsr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/manim_mindmap/algorithms/tidy_tree.html#TidyTreeLayout.set_right_thread"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.set_right_thread" title="链接到此定义。"></a></dt>
+<dd><p>设置右线程</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.update_iyl">
+<span class="sig-name descname"><span class="pre">update_iyl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">low</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">ih</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.IYLNode" title="manim_mindmap.algorithms.tidy_tree.IYLNode"><span class="pre">IYLNode</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(位于 Python v3.14)"><span class="pre">None</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.IYLNode" title="manim_mindmap.algorithms.tidy_tree.IYLNode"><span class="pre">IYLNode</span></a></span></span><a class="reference internal" href="../_modules/manim_mindmap/algorithms/tidy_tree.html#TidyTreeLayout.update_iyl"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.update_iyl" title="链接到此定义。"></a></dt>
+<dd><p>更新 IYLNode 链表: 淘汰掉 ih.low 值小于等于 low 的节点
+返回: 新的节点成为表头,并指向剩余链表</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="id3">
+<h2>数据结构<a class="headerlink" href="#id3" title="链接到此标题。"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.WrappedTree">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">manim_mindmap.algorithms.tidy_tree.</span></span><span class="sig-name descname"><span class="pre">WrappedTree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(位于 Python v3.14)"><span class="pre">Any</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">children</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(位于 Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="manim_mindmap.algorithms.tidy_tree.WrappedTree"><span class="pre">WrappedTree</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">child_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prelim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shift</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">change</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extreme_left</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="manim_mindmap.algorithms.tidy_tree.WrappedTree"><span class="pre">WrappedTree</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(位于 Python v3.14)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extreme_right</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="manim_mindmap.algorithms.tidy_tree.WrappedTree"><span class="pre">WrappedTree</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(位于 Python v3.14)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mod_sum_extreme_left</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mod_sum_extreme_right</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thread_left</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="manim_mindmap.algorithms.tidy_tree.WrappedTree"><span class="pre">WrappedTree</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(位于 Python v3.14)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thread_right</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="manim_mindmap.algorithms.tidy_tree.WrappedTree"><span class="pre">WrappedTree</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(位于 Python v3.14)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/manim_mindmap/algorithms/tidy_tree.html#WrappedTree"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="链接到此定义。"></a></dt>
+<dd><p>基类：<a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(位于 Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>包装树节点，用于布局计算</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.WrappedTree.change">
+<span class="sig-name descname"><span class="pre">change</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></span><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree.change" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.WrappedTree.child_number">
+<span class="sig-name descname"><span class="pre">child_number</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><span class="pre">int</span></a></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></span><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree.child_number" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.WrappedTree.children">
+<span class="sig-name descname"><span class="pre">children</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(位于 Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="manim_mindmap.algorithms.tidy_tree.WrappedTree"><span class="pre">WrappedTree</span></a><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree.children" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.WrappedTree.extreme_left">
+<span class="sig-name descname"><span class="pre">extreme_left</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="manim_mindmap.algorithms.tidy_tree.WrappedTree"><span class="pre">WrappedTree</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(位于 Python v3.14)"><span class="pre">None</span></a></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree.extreme_left" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.WrappedTree.extreme_right">
+<span class="sig-name descname"><span class="pre">extreme_right</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="manim_mindmap.algorithms.tidy_tree.WrappedTree"><span class="pre">WrappedTree</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(位于 Python v3.14)"><span class="pre">None</span></a></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree.extreme_right" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.WrappedTree.from_node">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">from_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_horizontal</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(位于 Python v3.14)"><span class="pre">bool</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="manim_mindmap.algorithms.tidy_tree.WrappedTree"><span class="pre">WrappedTree</span></a></span></span><a class="reference internal" href="../_modules/manim_mindmap/algorithms/tidy_tree.html#WrappedTree.from_node"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree.from_node" title="链接到此定义。"></a></dt>
+<dd><p>从原始节点创建包装树</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.WrappedTree.height">
+<span class="sig-name descname"><span class="pre">height</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></span><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree.height" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.WrappedTree.mod">
+<span class="sig-name descname"><span class="pre">mod</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></span><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree.mod" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.WrappedTree.mod_sum_extreme_left">
+<span class="sig-name descname"><span class="pre">mod_sum_extreme_left</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></span><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree.mod_sum_extreme_left" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.WrappedTree.mod_sum_extreme_right">
+<span class="sig-name descname"><span class="pre">mod_sum_extreme_right</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></span><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree.mod_sum_extreme_right" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.WrappedTree.node">
+<span class="sig-name descname"><span class="pre">node</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(位于 Python v3.14)"><span class="pre">Any</span></a></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree.node" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.WrappedTree.prelim">
+<span class="sig-name descname"><span class="pre">prelim</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></span><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree.prelim" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.WrappedTree.shift">
+<span class="sig-name descname"><span class="pre">shift</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></span><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree.shift" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.WrappedTree.thread_left">
+<span class="sig-name descname"><span class="pre">thread_left</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="manim_mindmap.algorithms.tidy_tree.WrappedTree"><span class="pre">WrappedTree</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(位于 Python v3.14)"><span class="pre">None</span></a></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree.thread_left" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.WrappedTree.thread_right">
+<span class="sig-name descname"><span class="pre">thread_right</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree" title="manim_mindmap.algorithms.tidy_tree.WrappedTree"><span class="pre">WrappedTree</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(位于 Python v3.14)"><span class="pre">None</span></a></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree.thread_right" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.WrappedTree.width">
+<span class="sig-name descname"><span class="pre">width</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></span><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree.width" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.WrappedTree.x">
+<span class="sig-name descname"><span class="pre">x</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></span><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree.x" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.WrappedTree.y">
+<span class="sig-name descname"><span class="pre">y</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></span><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.WrappedTree.y" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.IYLNode">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">manim_mindmap.algorithms.tidy_tree.</span></span><span class="sig-name descname"><span class="pre">IYLNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">low</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">nxt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.IYLNode" title="manim_mindmap.algorithms.tidy_tree.IYLNode"><span class="pre">IYLNode</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(位于 Python v3.14)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/manim_mindmap/algorithms/tidy_tree.html#IYLNode"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.IYLNode" title="链接到此定义。"></a></dt>
+<dd><p>基类：<a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(位于 Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>separate 函数中的最低轮廓线:
+为避免第 i 个子树与前面 i-1 个子树的逐一比较,通过链表单调裁剪,提升效率!
+被 IYLNode 淘汰的子树，已被更高且更靠右的中间子树完全遮挡，当前子树永远不可能先撞到它们</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.IYLNode.index">
+<span class="sig-name descname"><span class="pre">index</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(位于 Python v3.14)"><span class="pre">int</span></a></span><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.IYLNode.index" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.IYLNode.low">
+<span class="sig-name descname"><span class="pre">low</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(位于 Python v3.14)"><span class="pre">float</span></a></span><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.IYLNode.low" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="manim_mindmap.algorithms.tidy_tree.IYLNode.nxt">
+<span class="sig-name descname"><span class="pre">nxt</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#manim_mindmap.algorithms.tidy_tree.IYLNode" title="manim_mindmap.algorithms.tidy_tree.IYLNode"><span class="pre">IYLNode</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(位于 Python v3.14)"><span class="pre">None</span></a></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#manim_mindmap.algorithms.tidy_tree.IYLNode.nxt" title="链接到此定义。"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="animations.html" class="btn btn-neutral float-left" title="动画模块 (manim_mindmap.animations)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2026, jj-math。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

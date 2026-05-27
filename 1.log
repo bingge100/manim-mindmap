@@ -1,0 +1,36 @@
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'demo/mind_map.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'demo/mind_map_layout.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'demo/mind_map_node.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/_build/_static/_sphinx_javascript_frameworks_compat.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/_build/_static/base-stemmer.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/_build/_static/css/fonts/fontawesome-webfont.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/_build/_static/css/theme.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/_build/_static/doctools.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/_build/_static/english-stemmer.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/_build/_static/graphviz.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/_build/_static/jquery.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/_build/_static/searchtools.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/_build/_static/sphinx_highlight.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/_build/_static/translations.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'pyproject.toml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/manim_mindmap/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/manim_mindmap/algorithms/tidy_tree.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/manim_mindmap/animations/animations.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/manim_mindmap/mindmap/layout.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/manim_mindmap/nodes/node.py', LF will be replaced by CRLF the next time Git touches it
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got '27317@LAPTOP-PHOS224D.(none)')
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/bingge100/mind-map.git'

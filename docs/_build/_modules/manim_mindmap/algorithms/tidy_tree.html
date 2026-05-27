@@ -1,0 +1,595 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>manim_mindmap.algorithms.tidy_tree &mdash; manim-mindmap 0.1.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=d786bb5c"></script>
+      <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../../_static/translations.js?v=540d3cec"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            manim-mindmap
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">目录</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/index.html">API 参考</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/nodes.html">节点模块 (manim_mindmap.nodes)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/nodes.html#id1">节点类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/nodes.html#manim_mindmap.nodes.node.Node"><code class="docutils literal notranslate"><span class="pre">Node</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/nodes.html#id2">节点状态</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/nodes.html#manim_mindmap.nodes.node.NodeSate"><code class="docutils literal notranslate"><span class="pre">NodeSate</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/nodes.html#id3">节点样式</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/nodes.html#manim_mindmap.nodes.node.NodeStyle"><code class="docutils literal notranslate"><span class="pre">NodeStyle</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/nodes.html#id4">遍历函数</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/nodes.html#manim_mindmap.nodes.node.dfs_walker"><code class="docutils literal notranslate"><span class="pre">dfs_walker()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/nodes.html#manim_mindmap.nodes.node.bfs_walker"><code class="docutils literal notranslate"><span class="pre">bfs_walker()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/mindmap.html">思维导图模块 (manim_mindmap.mindmap)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/mindmap.html#id1">布局类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/mindmap.html#manim_mindmap.mindmap.layout.Layout"><code class="docutils literal notranslate"><span class="pre">Layout</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/mindmap.html#id2">思维导图类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/mindmap.html#manim_mindmap.mindmap.layout.MindMap"><code class="docutils literal notranslate"><span class="pre">MindMap</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/mindmap.html#mobject">节点 Mobject</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/mindmap.html#manim_mindmap.mindmap.layout.NodeMobject"><code class="docutils literal notranslate"><span class="pre">NodeMobject</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/animations.html">动画模块 (manim_mindmap.animations)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/animations.html#id1">动画基类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/animations.html#manim_mindmap.animations.animations.AbstractLayoutAnimation"><code class="docutils literal notranslate"><span class="pre">AbstractLayoutAnimation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/animations.html#id2">布局动画</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/animations.html#manim_mindmap.animations.animations.LayoutAnimation"><code class="docutils literal notranslate"><span class="pre">LayoutAnimation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/animations.html#id3">插入节点</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/animations.html#manim_mindmap.animations.animations.InsertNode"><code class="docutils literal notranslate"><span class="pre">InsertNode</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/animations.html#id4">删除节点</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/animations.html#manim_mindmap.animations.animations.RemoveNode"><code class="docutils literal notranslate"><span class="pre">RemoveNode</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/animations.html#id5">缩放节点</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/animations.html#manim_mindmap.animations.animations.ScaleNode"><code class="docutils literal notranslate"><span class="pre">ScaleNode</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/animations.html#id6">替换节点</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/animations.html#manim_mindmap.animations.animations.AlterNode"><code class="docutils literal notranslate"><span class="pre">AlterNode</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/animations.html#id7">辅助函数</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/animations.html#manim_mindmap.animations.animations.animate_of_layout"><code class="docutils literal notranslate"><span class="pre">animate_of_layout()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/animations.html#manim_mindmap.animations.animations.fadeout_of_subtrees"><code class="docutils literal notranslate"><span class="pre">fadeout_of_subtrees()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/algorithms.html">算法模块 (manim_mindmap.algorithms)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/algorithms.html#id1">布局接口</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/algorithms.html#manim_mindmap.algorithms.tidy_tree.tidy_tree_layout"><code class="docutils literal notranslate"><span class="pre">tidy_tree_layout()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/algorithms.html#id2">布局算法类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/algorithms.html#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout"><code class="docutils literal notranslate"><span class="pre">TidyTreeLayout</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/algorithms.html#id3">数据结构</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/algorithms.html#manim_mindmap.algorithms.tidy_tree.WrappedTree"><code class="docutils literal notranslate"><span class="pre">WrappedTree</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/algorithms.html#manim_mindmap.algorithms.tidy_tree.IYLNode"><code class="docutils literal notranslate"><span class="pre">IYLNode</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">manim-mindmap</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">模块代码</a></li>
+      <li class="breadcrumb-item active">manim_mindmap.algorithms.tidy_tree</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>manim_mindmap.algorithms.tidy_tree 源代码</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Non-layered Tidy Tree Layout Algorithm (Python Implementation)</span>
+<span class="sd">用于计算树形结构的节点位置布局</span>
+
+<span class="sd">算法参考来源《Improving Walker&#39;s Algorithm to Run in Linear Time》</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;tidy_tree_layout&#39;</span>
+<span class="p">]</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span><span class="p">,</span> <span class="n">field</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Any</span>
+
+<div class="viewcode-block" id="WrappedTree">
+<a class="viewcode-back" href="../../../api/algorithms.html#manim_mindmap.algorithms.tidy_tree.WrappedTree">[文档]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">WrappedTree</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;包装树节点，用于布局计算&quot;&quot;&quot;</span>
+    <span class="c1"># 原始节点引用</span>
+    <span class="n">node</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="c1"># 基本属性</span>
+    <span class="n">x</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">y</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">width</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">height</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="c1"># 子节点</span>
+    <span class="n">children</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="s1">&#39;WrappedTree&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">child_number</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># === 核心布局属性 ===</span>
+    <span class="n">prelim</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span>  <span class="c1"># 节点相对于父节点的初步位置，不考虑任何重叠修正</span>
+    <span class="n">mod</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span>     <span class="c1"># 以当前节点为根的整棵子树需要额外平移的量</span>
+    <span class="n">shift</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span>   <span class="c1"># 记录需要均匀分摊到后续兄弟子树的间距份额</span>
+    <span class="n">change</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span>  <span class="c1"># 在分摊链的末端节点做一次性修正，消除累积误差</span>
+
+    <span class="c1"># === 子树轮廓线追踪,用于不重叠检测 ===</span>
+    <span class="n">extreme_left</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="s1">&#39;WrappedTree&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># 最左端点节点</span>
+    <span class="n">extreme_right</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="s1">&#39;WrappedTree&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># 最右端点节点</span>
+    <span class="n">mod_sum_extreme_left</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span>   <span class="c1"># 从最左端点到根路径上所有 mod 的累加和</span>
+    <span class="n">mod_sum_extreme_right</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span>  <span class="c1"># 从最右端点到根路径上所有 mod 的累加和</span>
+
+    <span class="c1"># 线程,用于轮廓遍历: 两个子树的高度不同时,矮树耗尽时,链接到临近子树的轮廓</span>
+    <span class="n">thread_left</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="s1">&#39;WrappedTree&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">thread_right</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="s1">&#39;WrappedTree&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="WrappedTree.from_node">
+<a class="viewcode-back" href="../../../api/algorithms.html#manim_mindmap.algorithms.tidy_tree.WrappedTree.from_node">[文档]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_node</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">node</span><span class="p">,</span> <span class="n">is_horizontal</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;WrappedTree&#39;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;从原始节点创建包装树&quot;&quot;&quot;</span>
+        <span class="n">wt</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">()</span>
+        <span class="n">wt</span><span class="o">.</span><span class="n">node</span> <span class="o">=</span> <span class="n">node</span>
+
+        <span class="c1"># 复制尺寸</span>
+        <span class="k">if</span> <span class="n">is_horizontal</span><span class="p">:</span>
+            <span class="n">wt</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="n">wt</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s1">&#39;width&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="n">wt</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">wt</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s1">&#39;width&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="n">wt</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="n">wt</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="c1"># 递归创建子节点</span>
+        <span class="n">children</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s1">&#39;children&#39;</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="n">wt</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="bp">cls</span><span class="o">.</span><span class="n">from_node</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">is_horizontal</span><span class="p">)</span> <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">children</span><span class="p">]</span>
+        <span class="n">wt</span><span class="o">.</span><span class="n">child_number</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">wt</span><span class="o">.</span><span class="n">children</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">wt</span></div>
+</div>
+
+
+<div class="viewcode-block" id="IYLNode">
+<a class="viewcode-back" href="../../../api/algorithms.html#manim_mindmap.algorithms.tidy_tree.IYLNode">[文档]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">IYLNode</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    separate 函数中的最低轮廓线: </span>
+<span class="sd">    为避免第 i 个子树与前面 i-1 个子树的逐一比较,通过链表单调裁剪,提升效率!</span>
+<span class="sd">    被 IYLNode 淘汰的子树，已被更高且更靠右的中间子树完全遮挡，当前子树永远不可能先撞到它们</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">low</span><span class="p">:</span> <span class="nb">float</span>                       <span class="c1"># 子树最右轮廓低端节点,在正交方向上的高度</span>
+    <span class="n">index</span><span class="p">:</span> <span class="nb">int</span>                       <span class="c1"># 子树在兄弟节点中的索引</span>
+    <span class="n">nxt</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="s1">&#39;IYLNode&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># 指向链表中下一个 IYL 节点（该节点的 low 值严格更高）</span></div>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">move_right</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">move</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">is_horizontal</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;向右（或向下）移动节点及其所有子节点&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">is_horizontal</span><span class="p">:</span>
+        <span class="n">node</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">move</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">node</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">move</span>
+    <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+        <span class="n">move_right</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">move</span><span class="p">,</span> <span class="n">is_horizontal</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">get_min</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">is_horizontal</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;获取节点树中最小坐标值&quot;&quot;&quot;</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">y</span> <span class="k">if</span> <span class="n">is_horizontal</span> <span class="k">else</span> <span class="n">node</span><span class="o">.</span><span class="n">x</span>
+    <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">get_min</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">is_horizontal</span><span class="p">),</span> <span class="n">res</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">res</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">normalize</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">is_horizontal</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;归一化坐标: 将最小坐标对齐到0,确保布局从原点开始&quot;&quot;&quot;</span>
+    <span class="n">min_val</span> <span class="o">=</span> <span class="n">get_min</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">is_horizontal</span><span class="p">)</span>
+    <span class="n">move_right</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="o">-</span><span class="n">min_val</span><span class="p">,</span> <span class="n">is_horizontal</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">convert_back</span><span class="p">(</span><span class="n">converted</span><span class="p">:</span> <span class="n">WrappedTree</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="n">is_horizontal</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;将计算结果转换回原始节点：将 WrappedTree.x 写回原始节点的 x 或 y(根据方向)&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">is_horizontal</span><span class="p">:</span>
+        <span class="n">root</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">converted</span><span class="o">.</span><span class="n">x</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">root</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">converted</span><span class="o">.</span><span class="n">x</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">child</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">converted</span><span class="o">.</span><span class="n">children</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">children</span><span class="p">):</span>
+            <span class="n">convert_back</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">root</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">is_horizontal</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">layer</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span><span class="n">level_spacing</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;设置层级（深度）坐标&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">parent</span> <span class="o">:=</span> <span class="n">node</span><span class="o">.</span><span class="n">parent</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">node</span><span class="o">.</span><span class="n">level</span> <span class="o">=</span> <span class="n">parent</span><span class="o">.</span><span class="n">level</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">direction</span> <span class="o">==</span> <span class="s1">&#39;right&#39;</span><span class="p">:</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">parent</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="p">(</span><span class="n">parent</span><span class="o">.</span><span class="n">width</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="n">width</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">level_spacing</span>
+        <span class="k">elif</span> <span class="n">direction</span> <span class="o">==</span> <span class="s1">&#39;left&#39;</span><span class="p">:</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">parent</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="p">(</span><span class="n">parent</span><span class="o">.</span><span class="n">width</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="n">width</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">level_spacing</span>
+        <span class="k">elif</span> <span class="n">direction</span> <span class="o">==</span> <span class="s1">&#39;up&#39;</span><span class="p">:</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">parent</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="p">(</span><span class="n">parent</span><span class="o">.</span><span class="n">height</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="n">height</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">level_spacing</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">parent</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="p">(</span><span class="n">parent</span><span class="o">.</span><span class="n">height</span> <span class="o">+</span> <span class="n">node</span><span class="o">.</span><span class="n">height</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">level_spacing</span>
+
+    <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+        <span class="n">layer</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span><span class="n">level_spacing</span><span class="p">)</span>
+
+<div class="viewcode-block" id="TidyTreeLayout">
+<a class="viewcode-back" href="../../../api/algorithms.html#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout">[文档]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">TidyTreeLayout</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;非分层整洁树布局算法&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">root</span><span class="p">,</span>
+        <span class="n">direction</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;right&#39;</span><span class="p">,</span>
+        <span class="n">node_spacing</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="n">level_spacing</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.5</span>
+    <span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">root</span> <span class="o">=</span> <span class="n">root</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">direction</span> <span class="o">=</span> <span class="n">direction</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_horizontal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_horizontal</span><span class="p">(</span><span class="n">direction</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">node_spacing</span> <span class="o">=</span> <span class="n">node_spacing</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">level_spacing</span> <span class="o">=</span> <span class="n">level_spacing</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wt</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_is_horizontal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">direction</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">direction</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="s1">&#39;left&#39;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="TidyTreeLayout.layout">
+<a class="viewcode-back" href="../../../api/algorithms.html#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.layout">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">layout</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;执行布局计算&quot;&quot;&quot;</span>
+        <span class="n">layer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">root</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">level_spacing</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wt</span> <span class="o">=</span> <span class="n">WrappedTree</span><span class="o">.</span><span class="n">from_node</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">root</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_horizontal</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">first_walk</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">wt</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">second_walk</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">wt</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">convert_back</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">wt</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">root</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_horizontal</span><span class="p">)</span>
+        <span class="n">normalize</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">root</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_horizontal</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">root</span></div>
+
+
+<div class="viewcode-block" id="TidyTreeLayout.first_walk">
+<a class="viewcode-back" href="../../../api/algorithms.html#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.first_walk">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">first_walk</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="n">WrappedTree</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        第一次遍历：</span>
+<span class="sd">        计算每个节点的 prelim(初步相对位置)和 mod(修饰偏移),检测并消除子树间的重叠</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">t</span><span class="o">.</span><span class="n">child_number</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_extremes</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="c1"># 处理第一个子节点</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">first_walk</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">ih</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">update_iyl</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bottom</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">extreme_right</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="c1"># 处理其余子节点</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">child_number</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">first_walk</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">min_val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bottom</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">extreme_right</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">separate</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ih</span><span class="p">)</span>
+            <span class="n">ih</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">update_iyl</span><span class="p">(</span><span class="n">min_val</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ih</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">position_root</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_extremes</span><span class="p">(</span><span class="n">t</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="TidyTreeLayout.set_extremes">
+<a class="viewcode-back" href="../../../api/algorithms.html#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.set_extremes">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_extremes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="n">WrappedTree</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;设置极值节点&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">t</span><span class="o">.</span><span class="n">child_number</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">t</span><span class="o">.</span><span class="n">extreme_left</span> <span class="o">=</span> <span class="n">t</span>
+            <span class="n">t</span><span class="o">.</span><span class="n">extreme_right</span> <span class="o">=</span> <span class="n">t</span>
+            <span class="n">t</span><span class="o">.</span><span class="n">mod_sum_extreme_left</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">t</span><span class="o">.</span><span class="n">mod_sum_extreme_right</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">t</span><span class="o">.</span><span class="n">extreme_left</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">extreme_left</span>
+            <span class="n">t</span><span class="o">.</span><span class="n">mod_sum_extreme_left</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">mod_sum_extreme_left</span>
+            <span class="n">t</span><span class="o">.</span><span class="n">extreme_right</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">extreme_right</span>
+            <span class="n">t</span><span class="o">.</span><span class="n">mod_sum_extreme_right</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">mod_sum_extreme_right</span></div>
+
+
+<div class="viewcode-block" id="TidyTreeLayout.update_iyl">
+<a class="viewcode-back" href="../../../api/algorithms.html#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.update_iyl">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update_iyl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">low</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">ih</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">IYLNode</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">IYLNode</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        更新 IYLNode 链表: 淘汰掉 ih.low 值小于等于 low 的节点</span>
+<span class="sd">        返回: 新的节点成为表头,并指向剩余链表</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">while</span> <span class="n">ih</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">low</span> <span class="o">&gt;=</span> <span class="n">ih</span><span class="o">.</span><span class="n">low</span><span class="p">:</span>
+            <span class="n">ih</span> <span class="o">=</span> <span class="n">ih</span><span class="o">.</span><span class="n">nxt</span>
+        <span class="k">return</span> <span class="n">IYLNode</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">ih</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="TidyTreeLayout.separate">
+<a class="viewcode-back" href="../../../api/algorithms.html#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.separate">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">separate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="n">WrappedTree</span><span class="p">,</span> <span class="n">i</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">ih</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">IYLNode</span><span class="p">]):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        算法核心: 分离第i个子树与前面子树,确保不重叠</span>
+
+<span class="sd">        参数:</span>
+<span class="sd">            t (WrappedTree): 父节点</span>
+<span class="sd">            i (int): 当前子树索引</span>
+<span class="sd">            ih (Optional[IYLNode]): 那些&quot;右轮廓还暴露在外、可能先与第 i 个子树发生碰撞&quot;的前序子树</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">sr</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>   <span class="c1"># 当前右轮廓节点，初始为紧邻的左兄弟</span>
+        <span class="n">mssr</span> <span class="o">=</span> <span class="n">sr</span><span class="o">.</span><span class="n">mod</span>            <span class="c1"># 从 t.children[i-1] 到 sr 路径上的 mod 累加和</span>
+        <span class="n">cl</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>       <span class="c1"># 当前左轮廓节点，初始为当前子树根节点</span>
+        <span class="n">mscl</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">mod</span>            <span class="c1"># 从 t.children[i] 到 cl 路径上的 mod 累加和</span>
+
+        <span class="k">while</span> <span class="n">sr</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">cl</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># 跳过已被完全遮挡的前序子树</span>
+            <span class="k">if</span> <span class="n">ih</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">bottom</span><span class="p">(</span><span class="n">sr</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">ih</span><span class="o">.</span><span class="n">low</span><span class="p">:</span>
+                <span class="c1"># 当前 sr 高度已经超过了该前序子树的轮廓范围，在这个高度上,ih 不可能与当前子树碰撞</span>
+                <span class="c1"># 跳过该前序子树，继续与下一个更高的前序子树比较</span>
+                <span class="n">ih</span> <span class="o">=</span> <span class="n">ih</span><span class="o">.</span><span class="n">nxt</span>
+
+            <span class="n">dist</span> <span class="o">=</span> <span class="n">mssr</span> <span class="o">+</span> <span class="n">sr</span><span class="o">.</span><span class="n">prelim</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">node_spacing</span> <span class="o">+</span> <span class="p">(</span><span class="n">sr</span><span class="o">.</span><span class="n">width</span> <span class="o">+</span> <span class="n">cl</span><span class="o">.</span><span class="n">width</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span> <span class="o">-</span> <span class="p">(</span><span class="n">mscl</span> <span class="o">+</span> <span class="n">cl</span><span class="o">.</span><span class="n">prelim</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">dist</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">mscl</span> <span class="o">+=</span> <span class="n">dist</span>
+                <span class="n">si</span> <span class="o">=</span> <span class="n">ih</span><span class="o">.</span><span class="n">index</span> <span class="k">if</span> <span class="n">ih</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">move_subtree</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">si</span><span class="p">,</span> <span class="n">dist</span><span class="p">)</span>
+
+            <span class="n">sy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bottom</span><span class="p">(</span><span class="n">sr</span><span class="p">)</span>
+            <span class="n">cy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bottom</span><span class="p">(</span><span class="n">cl</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">sy</span> <span class="o">&lt;=</span> <span class="n">cy</span><span class="p">:</span>
+                <span class="n">sr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">next_right_contour</span><span class="p">(</span><span class="n">sr</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">sr</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">mssr</span> <span class="o">+=</span> <span class="n">sr</span><span class="o">.</span><span class="n">mod</span>
+
+            <span class="k">if</span> <span class="n">sy</span> <span class="o">&gt;=</span> <span class="n">cy</span><span class="p">:</span>
+                <span class="n">cl</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">next_left_contour</span><span class="p">(</span><span class="n">cl</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">cl</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">mscl</span> <span class="o">+=</span> <span class="n">cl</span><span class="o">.</span><span class="n">mod</span>
+
+        <span class="k">if</span> <span class="n">sr</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">cl</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_left_thread</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">cl</span><span class="p">,</span> <span class="n">mscl</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">sr</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">cl</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_right_thread</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">sr</span><span class="p">,</span> <span class="n">mssr</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="TidyTreeLayout.move_subtree">
+<a class="viewcode-back" href="../../../api/algorithms.html#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.move_subtree">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">move_subtree</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="n">WrappedTree</span><span class="p">,</span> <span class="n">i</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">si</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">dist</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;移动子树&quot;&quot;&quot;</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">mod</span> <span class="o">+=</span> <span class="n">dist</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">mod_sum_extreme_left</span> <span class="o">+=</span> <span class="n">dist</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">mod_sum_extreme_right</span> <span class="o">+=</span> <span class="n">dist</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">distribute_extra</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">si</span><span class="p">,</span> <span class="n">dist</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="TidyTreeLayout.distribute_extra">
+<a class="viewcode-back" href="../../../api/algorithms.html#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.distribute_extra">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">distribute_extra</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="n">WrappedTree</span><span class="p">,</span> <span class="n">i</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">si</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">dist</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;分配额外间距&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">si</span> <span class="o">!=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">nr</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="n">si</span>
+            <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="n">si</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span> <span class="o">+=</span> <span class="n">dist</span> <span class="o">/</span> <span class="n">nr</span>
+            <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span> <span class="o">-=</span> <span class="n">dist</span> <span class="o">/</span> <span class="n">nr</span>
+            <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">change</span> <span class="o">-=</span> <span class="n">dist</span> <span class="o">-</span> <span class="n">dist</span> <span class="o">/</span> <span class="n">nr</span></div>
+
+
+<div class="viewcode-block" id="TidyTreeLayout.next_left_contour">
+<a class="viewcode-back" href="../../../api/algorithms.html#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.next_left_contour">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">next_left_contour</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="n">WrappedTree</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">WrappedTree</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;获取下一个左轮廓节点&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">t</span><span class="o">.</span><span class="n">thread_left</span> <span class="k">if</span> <span class="n">t</span><span class="o">.</span><span class="n">child_number</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="TidyTreeLayout.next_right_contour">
+<a class="viewcode-back" href="../../../api/algorithms.html#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.next_right_contour">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">next_right_contour</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="n">WrappedTree</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">WrappedTree</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;获取下一个右轮廓节点&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">t</span><span class="o">.</span><span class="n">thread_right</span> <span class="k">if</span> <span class="n">t</span><span class="o">.</span><span class="n">child_number</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="TidyTreeLayout.bottom">
+<a class="viewcode-back" href="../../../api/algorithms.html#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.bottom">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">bottom</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="n">WrappedTree</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;返回节点在正交方向上的高度&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_horizontal</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">t</span><span class="o">.</span><span class="n">height</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="nb">abs</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="o">+</span> <span class="n">t</span><span class="o">.</span><span class="n">height</span><span class="o">/</span><span class="mi">2</span></div>
+
+
+<div class="viewcode-block" id="TidyTreeLayout.set_left_thread">
+<a class="viewcode-back" href="../../../api/algorithms.html#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.set_left_thread">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_left_thread</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="n">WrappedTree</span><span class="p">,</span> <span class="n">i</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">cl</span><span class="p">:</span> <span class="n">WrappedTree</span><span class="p">,</span> <span class="n">modsumcl</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;设置左线程&quot;&quot;&quot;</span>
+        <span class="n">li</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">extreme_left</span>
+        <span class="n">li</span><span class="o">.</span><span class="n">thread_left</span> <span class="o">=</span> <span class="n">cl</span>
+        <span class="n">diff</span> <span class="o">=</span> <span class="p">(</span><span class="n">modsumcl</span> <span class="o">-</span> <span class="n">cl</span><span class="o">.</span><span class="n">mod</span><span class="p">)</span> <span class="o">-</span> <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">mod_sum_extreme_left</span>
+        <span class="n">li</span><span class="o">.</span><span class="n">mod</span> <span class="o">+=</span> <span class="n">diff</span>
+        <span class="n">li</span><span class="o">.</span><span class="n">prelim</span> <span class="o">-=</span> <span class="n">diff</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">extreme_left</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">extreme_left</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">mod_sum_extreme_left</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">mod_sum_extreme_left</span></div>
+
+
+<div class="viewcode-block" id="TidyTreeLayout.set_right_thread">
+<a class="viewcode-back" href="../../../api/algorithms.html#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.set_right_thread">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_right_thread</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="n">WrappedTree</span><span class="p">,</span> <span class="n">i</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">sr</span><span class="p">:</span> <span class="n">WrappedTree</span><span class="p">,</span> <span class="n">modsumsr</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;设置右线程&quot;&quot;&quot;</span>
+        <span class="n">ri</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">extreme_right</span>
+        <span class="n">ri</span><span class="o">.</span><span class="n">thread_right</span> <span class="o">=</span> <span class="n">sr</span>
+        <span class="n">diff</span> <span class="o">=</span> <span class="p">(</span><span class="n">modsumsr</span> <span class="o">-</span> <span class="n">sr</span><span class="o">.</span><span class="n">mod</span><span class="p">)</span> <span class="o">-</span> <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">mod_sum_extreme_right</span>
+        <span class="n">ri</span><span class="o">.</span><span class="n">mod</span> <span class="o">+=</span> <span class="n">diff</span>
+        <span class="n">ri</span><span class="o">.</span><span class="n">prelim</span> <span class="o">-=</span> <span class="n">diff</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">extreme_right</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">extreme_right</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">mod_sum_extreme_right</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">mod_sum_extreme_right</span></div>
+
+
+<div class="viewcode-block" id="TidyTreeLayout.position_root">
+<a class="viewcode-back" href="../../../api/algorithms.html#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.position_root">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">position_root</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="n">WrappedTree</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;放置子树 t 根节点: 将其放置在子节点的正中间&quot;&quot;&quot;</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">prelim</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">prelim</span> <span class="o">+</span> <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">mod</span> <span class="o">+</span> <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">mod</span> <span class="o">+</span> <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">prelim</span> 
+        <span class="p">)</span> <span class="o">/</span> <span class="mi">2</span></div>
+
+
+<div class="viewcode-block" id="TidyTreeLayout.second_walk">
+<a class="viewcode-back" href="../../../api/algorithms.html#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.second_walk">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">second_walk</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="n">WrappedTree</span><span class="p">,</span> <span class="n">modsum</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        第二次遍历：</span>
+<span class="sd">        将 prelim 和 mod 累加到最终绝对非层级的坐标 x 或 y 上</span>
+
+<span class="sd">        参数:</span>
+<span class="sd">            modsum: 从根到当前路径上所有祖先 mod 值的总和</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">modsum</span> <span class="o">+=</span> <span class="n">t</span><span class="o">.</span><span class="n">mod</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_horizontal</span><span class="p">:</span>
+            <span class="n">t</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="n">t</span><span class="o">.</span><span class="n">prelim</span> <span class="o">-</span> <span class="n">modsum</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">t</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">prelim</span> <span class="o">+</span> <span class="n">modsum</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_child_spacing</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">second_walk</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">modsum</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="TidyTreeLayout.add_child_spacing">
+<a class="viewcode-back" href="../../../api/algorithms.html#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout.add_child_spacing">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_child_spacing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="n">WrappedTree</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;添加子节点间距&quot;&quot;&quot;</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">modsumdelta</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">t</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+            <span class="n">d</span> <span class="o">+=</span> <span class="n">child</span><span class="o">.</span><span class="n">shift</span>
+            <span class="n">modsumdelta</span> <span class="o">+=</span> <span class="n">d</span> <span class="o">+</span> <span class="n">child</span><span class="o">.</span><span class="n">change</span>
+            <span class="n">child</span><span class="o">.</span><span class="n">mod</span> <span class="o">+=</span> <span class="n">modsumdelta</span></div>
+</div>
+
+
+<div class="viewcode-block" id="tidy_tree_layout">
+<a class="viewcode-back" href="../../../api/algorithms.html#manim_mindmap.algorithms.tidy_tree.tidy_tree_layout">[文档]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">tidy_tree_layout</span><span class="p">(</span>
+    <span class="n">root</span><span class="p">,</span>
+    <span class="n">direction</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;down&quot;</span><span class="p">,</span>
+    <span class="n">node_spacing</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">level_spacing</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.5</span>
+    <span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    对树形结构进行整洁布局函数接口</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        root: 根节点，需要包含以下属性：</span>
+<span class="sd">            - width: 节点宽度</span>
+<span class="sd">            - height: 节点高度</span>
+<span class="sd">            - children: 子节点列表</span>
+<span class="sd">            - x, y: 布局后的坐标（会被修改）</span>
+<span class="sd">        direction: 布局方向，可选 &quot;down&quot;, &quot;up&quot;, &quot;left&quot;, &quot;right&quot;，默认 &quot;down&quot;</span>
+<span class="sd">        node_spacing: 兄弟节点间距,默认0.5</span>
+<span class="sd">        level_spacing: 层级节点间距,默认0.5</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        root: 修改后的根节点(x, y 已被设置)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">layout</span> <span class="o">=</span> <span class="n">TidyTreeLayout</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span><span class="n">node_spacing</span><span class="p">,</span> <span class="n">level_spacing</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">layout</span><span class="o">.</span><span class="n">layout</span><span class="p">()</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2026, jj-math。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

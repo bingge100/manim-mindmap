@@ -1,0 +1,119 @@
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="720pt" height="111pt" viewBox="0.00 0.00 720.00 111.00">
+<ns0:g id="graph0" class="graph" transform="scale(0.736008 0.736008) rotate(0) translate(4 146.25)">
+<ns0:title>inheritance8c16e36bc4</ns0:title>
+
+<ns0:g id="node1" class="node">
+<ns0:title>animation.Animation</ns0:title>
+<ns0:g id="a_node1"><ns0:a ns1:href="https://docs.manim.community/en/stable/reference/manim.animation.animation.Animation.html#manim.animation.animation.Animation" ns1:title="An animation." target="_top">
+<ns0:path fill="#f8f8f8" stroke="black" d="M118.08,-82.25C118.08,-82.25 7.42,-82.25 7.42,-82.25 3.71,-82.25 0,-78.54 0,-74.83 0,-74.83 0,-67.42 0,-67.42 0,-63.71 3.71,-60 7.42,-60 7.42,-60 118.08,-60 118.08,-60 121.79,-60 125.5,-63.71 125.5,-67.42 125.5,-67.42 125.5,-74.83 125.5,-74.83 125.5,-78.54 121.79,-82.25 118.08,-82.25" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="62.75" y="-66.85" font-family="Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans" font-size="12.00">animation.Animation</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="node3" class="node">
+<ns0:title>composition.AnimationGroup</ns0:title>
+<ns0:g id="a_node3"><ns0:a ns1:href="https://docs.manim.community/en/stable/reference/manim.animation.composition.AnimationGroup.html#manim.animation.composition.AnimationGroup" ns1:title="Plays a group or series of :class:`~.Animation`." target="_top">
+<ns0:path fill="#f8f8f8" stroke="black" d="M324.58,-82.25C324.58,-82.25 168.92,-82.25 168.92,-82.25 165.21,-82.25 161.5,-78.54 161.5,-74.83 161.5,-74.83 161.5,-67.42 161.5,-67.42 161.5,-63.71 165.21,-60 168.92,-60 168.92,-60 324.58,-60 324.58,-60 328.29,-60 332,-63.71 332,-67.42 332,-67.42 332,-74.83 332,-74.83 332,-78.54 328.29,-82.25 324.58,-82.25" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="246.75" y="-66.85" font-family="Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans" font-size="12.00">composition.AnimationGroup</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="edge7" class="edge">
+<ns0:title>animation.Animation-&gt;composition.AnimationGroup</ns0:title>
+<ns0:path fill="none" stroke="black" stroke-width="0.5" d="M125.88,-71.12C135.17,-71.12 144.91,-71.12 154.65,-71.12" />
+<ns0:polygon fill="black" stroke="black" stroke-width="0.5" points="155.29,-72.88 160.29,-71.13 155.29,-69.38 155.29,-72.88" />
+</ns0:g>
+
+<ns0:g id="node2" class="node">
+<ns0:title>animations.AbstractLayoutAnimation</ns0:title>
+<ns0:g id="a_node2"><ns0:a ns1:href="..\api\animations.html#manim_mindmap.animations.animations.AbstractLayoutAnimation" ns1:title="animations.AbstractLayoutAnimation" target="_top">
+<ns0:path fill="#f8f8f8" stroke="black" d="M571.58,-82.25C571.58,-82.25 375.42,-82.25 375.42,-82.25 371.71,-82.25 368,-78.54 368,-74.83 368,-74.83 368,-67.42 368,-67.42 368,-63.71 371.71,-60 375.42,-60 375.42,-60 571.58,-60 571.58,-60 575.29,-60 579,-63.71 579,-67.42 579,-67.42 579,-74.83 579,-74.83 579,-78.54 575.29,-82.25 571.58,-82.25" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="473.5" y="-66.85" font-family="Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans" font-size="12.00">animations.AbstractLayoutAnimation</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="node5" class="node">
+<ns0:title>animations.LayoutAnimation</ns0:title>
+<ns0:g id="a_node5"><ns0:a ns1:href="..\api\animations.html#manim_mindmap.animations.animations.LayoutAnimation" ns1:title="animations.LayoutAnimation" target="_top">
+<ns0:path fill="#f8f8f8" stroke="black" d="M775.08,-82.25C775.08,-82.25 622.42,-82.25 622.42,-82.25 618.71,-82.25 615,-78.54 615,-74.83 615,-74.83 615,-67.42 615,-67.42 615,-63.71 618.71,-60 622.42,-60 622.42,-60 775.08,-60 775.08,-60 778.79,-60 782.5,-63.71 782.5,-67.42 782.5,-67.42 782.5,-74.83 782.5,-74.83 782.5,-78.54 778.79,-82.25 775.08,-82.25" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="698.75" y="-66.85" font-family="Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans" font-size="12.00">animations.LayoutAnimation</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="edge4" class="edge">
+<ns0:title>animations.AbstractLayoutAnimation-&gt;animations.LayoutAnimation</ns0:title>
+<ns0:path fill="none" stroke="black" stroke-width="0.5" d="M579.26,-71.12C589.02,-71.12 598.85,-71.12 608.45,-71.12" />
+<ns0:polygon fill="black" stroke="black" stroke-width="0.5" points="608.96,-72.88 613.96,-71.13 608.96,-69.38 608.96,-72.88" />
+</ns0:g>
+
+<ns0:g id="edge1" class="edge">
+<ns0:title>composition.AnimationGroup-&gt;animations.AbstractLayoutAnimation</ns0:title>
+<ns0:path fill="none" stroke="black" stroke-width="0.5" d="M332.4,-71.12C341.89,-71.12 351.67,-71.12 361.43,-71.12" />
+<ns0:polygon fill="black" stroke="black" stroke-width="0.5" points="362.08,-72.88 367.08,-71.13 362.08,-69.38 362.08,-72.88" />
+</ns0:g>
+
+<ns0:g id="node4" class="node">
+<ns0:title>animations.AlterNode</ns0:title>
+<ns0:g id="a_node4"><ns0:a ns1:href="..\api\animations.html#manim_mindmap.animations.animations.AlterNode" ns1:title="animations.AlterNode" target="_top">
+<ns0:path fill="#f8f8f8" stroke="black" d="M952.71,-142.25C952.71,-142.25 836.04,-142.25 836.04,-142.25 832.33,-142.25 828.62,-138.54 828.62,-134.83 828.62,-134.83 828.62,-127.42 828.62,-127.42 828.62,-123.71 832.33,-120 836.04,-120 836.04,-120 952.71,-120 952.71,-120 956.42,-120 960.12,-123.71 960.12,-127.42 960.12,-127.42 960.12,-134.83 960.12,-134.83 960.12,-138.54 956.42,-142.25 952.71,-142.25" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="894.38" y="-126.85" font-family="Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans" font-size="12.00">animations.AlterNode</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="edge2" class="edge">
+<ns0:title>animations.LayoutAnimation-&gt;animations.AlterNode</ns0:title>
+<ns0:path fill="none" stroke="black" stroke-width="0.5" d="M732.33,-82.73C756.09,-91.03 789.13,-102.27 818.5,-111.12 826.1,-113.42 834.17,-115.71 842.09,-117.89" />
+<ns0:polygon fill="black" stroke="black" stroke-width="0.5" points="842.09,-119.71 847.38,-119.33 843.01,-116.33 842.09,-119.71" />
+</ns0:g>
+
+<ns0:g id="node6" class="node">
+<ns0:title>animations.InsertNode</ns0:title>
+<ns0:g id="a_node6"><ns0:a ns1:href="..\api\animations.html#manim_mindmap.animations.animations.InsertNode" ns1:title="animations.InsertNode" target="_top">
+<ns0:path fill="#f8f8f8" stroke="black" d="M954.96,-102.25C954.96,-102.25 833.79,-102.25 833.79,-102.25 830.08,-102.25 826.38,-98.54 826.38,-94.83 826.38,-94.83 826.38,-87.42 826.38,-87.42 826.38,-83.71 830.08,-80 833.79,-80 833.79,-80 954.96,-80 954.96,-80 958.67,-80 962.38,-83.71 962.38,-87.42 962.38,-87.42 962.38,-94.83 962.38,-94.83 962.38,-98.54 958.67,-102.25 954.96,-102.25" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="894.38" y="-86.85" font-family="Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans" font-size="12.00">animations.InsertNode</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="edge3" class="edge">
+<ns0:title>animations.LayoutAnimation-&gt;animations.InsertNode</ns0:title>
+<ns0:path fill="none" stroke="black" stroke-width="0.5" d="M782.99,-79.72C795.21,-80.99 807.72,-82.28 819.73,-83.52" />
+<ns0:polygon fill="black" stroke="black" stroke-width="0.5" points="820.05,-85.31 825.21,-84.08 820.41,-81.83 820.05,-85.31" />
+</ns0:g>
+
+<ns0:g id="node7" class="node">
+<ns0:title>animations.RemoveNode</ns0:title>
+<ns0:g id="a_node7"><ns0:a ns1:href="..\api\animations.html#manim_mindmap.animations.animations.RemoveNode" ns1:title="&#31227;&#38500;&#20197; nodes &#20026;&#26681;&#30340;&#26641;&#25110;&#23376;&#26641;, nodes &#21487;&#20197;&#26159;&#19968;&#20010;&#33410;&#28857;,&#20063;&#21487;&#20197;&#26159;&#19968;&#20010;&#33410;&#28857;&#21015;&#34920;" target="_top">
+<ns0:path fill="#f8f8f8" stroke="black" d="M962.83,-62.25C962.83,-62.25 825.92,-62.25 825.92,-62.25 822.21,-62.25 818.5,-58.54 818.5,-54.83 818.5,-54.83 818.5,-47.42 818.5,-47.42 818.5,-43.71 822.21,-40 825.92,-40 825.92,-40 962.83,-40 962.83,-40 966.54,-40 970.25,-43.71 970.25,-47.42 970.25,-47.42 970.25,-54.83 970.25,-54.83 970.25,-58.54 966.54,-62.25 962.83,-62.25" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="894.38" y="-46.85" font-family="Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans" font-size="12.00">animations.RemoveNode</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="edge5" class="edge">
+<ns0:title>animations.LayoutAnimation-&gt;animations.RemoveNode</ns0:title>
+<ns0:path fill="none" stroke="black" stroke-width="0.5" d="M782.99,-62.53C792.57,-61.54 802.34,-60.53 811.9,-59.54" />
+<ns0:polygon fill="black" stroke="black" stroke-width="0.5" points="812.6,-61.23 817.4,-58.97 812.24,-57.75 812.6,-61.23" />
+</ns0:g>
+
+<ns0:g id="node8" class="node">
+<ns0:title>animations.ScaleNode</ns0:title>
+<ns0:g id="a_node8"><ns0:a ns1:href="..\api\animations.html#manim_mindmap.animations.animations.ScaleNode" ns1:title="animations.ScaleNode" target="_top">
+<ns0:path fill="#f8f8f8" stroke="black" d="M955.71,-22.25C955.71,-22.25 833.04,-22.25 833.04,-22.25 829.33,-22.25 825.62,-18.54 825.62,-14.83 825.62,-14.83 825.62,-7.42 825.62,-7.42 825.62,-3.71 829.33,0 833.04,0 833.04,0 955.71,0 955.71,0 959.42,0 963.12,-3.71 963.12,-7.42 963.12,-7.42 963.12,-14.83 963.12,-14.83 963.12,-18.54 959.42,-22.25 955.71,-22.25" />
+<ns0:text xml:space="preserve" text-anchor="middle" x="894.38" y="-6.85" font-family="Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans" font-size="12.00">animations.ScaleNode</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="edge6" class="edge">
+<ns0:title>animations.LayoutAnimation-&gt;animations.ScaleNode</ns0:title>
+<ns0:path fill="none" stroke="black" stroke-width="0.5" d="M732.33,-59.52C756.09,-51.22 789.13,-39.98 818.5,-31.12 826.1,-28.83 834.17,-26.54 842.09,-24.36" />
+<ns0:polygon fill="black" stroke="black" stroke-width="0.5" points="843.01,-25.92 847.38,-22.92 842.09,-22.54 843.01,-25.92" />
+</ns0:g>
+</ns0:g>
+</ns0:svg>

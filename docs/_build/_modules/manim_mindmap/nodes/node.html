@@ -1,0 +1,490 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>manim_mindmap.nodes.node &mdash; manim-mindmap 0.1.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=d786bb5c"></script>
+      <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../../_static/translations.js?v=540d3cec"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            manim-mindmap
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">目录</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/index.html">API 参考</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/nodes.html">节点模块 (manim_mindmap.nodes)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/nodes.html#id1">节点类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/nodes.html#manim_mindmap.nodes.node.Node"><code class="docutils literal notranslate"><span class="pre">Node</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/nodes.html#id2">节点状态</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/nodes.html#manim_mindmap.nodes.node.NodeSate"><code class="docutils literal notranslate"><span class="pre">NodeSate</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/nodes.html#id3">节点样式</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/nodes.html#manim_mindmap.nodes.node.NodeStyle"><code class="docutils literal notranslate"><span class="pre">NodeStyle</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/nodes.html#id4">遍历函数</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/nodes.html#manim_mindmap.nodes.node.dfs_walker"><code class="docutils literal notranslate"><span class="pre">dfs_walker()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/nodes.html#manim_mindmap.nodes.node.bfs_walker"><code class="docutils literal notranslate"><span class="pre">bfs_walker()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/mindmap.html">思维导图模块 (manim_mindmap.mindmap)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/mindmap.html#id1">布局类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/mindmap.html#manim_mindmap.mindmap.layout.Layout"><code class="docutils literal notranslate"><span class="pre">Layout</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/mindmap.html#id2">思维导图类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/mindmap.html#manim_mindmap.mindmap.layout.MindMap"><code class="docutils literal notranslate"><span class="pre">MindMap</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/mindmap.html#mobject">节点 Mobject</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/mindmap.html#manim_mindmap.mindmap.layout.NodeMobject"><code class="docutils literal notranslate"><span class="pre">NodeMobject</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/animations.html">动画模块 (manim_mindmap.animations)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/animations.html#id1">动画基类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/animations.html#manim_mindmap.animations.animations.AbstractLayoutAnimation"><code class="docutils literal notranslate"><span class="pre">AbstractLayoutAnimation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/animations.html#id2">布局动画</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/animations.html#manim_mindmap.animations.animations.LayoutAnimation"><code class="docutils literal notranslate"><span class="pre">LayoutAnimation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/animations.html#id3">插入节点</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/animations.html#manim_mindmap.animations.animations.InsertNode"><code class="docutils literal notranslate"><span class="pre">InsertNode</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/animations.html#id4">删除节点</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/animations.html#manim_mindmap.animations.animations.RemoveNode"><code class="docutils literal notranslate"><span class="pre">RemoveNode</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/animations.html#id5">缩放节点</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/animations.html#manim_mindmap.animations.animations.ScaleNode"><code class="docutils literal notranslate"><span class="pre">ScaleNode</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/animations.html#id6">替换节点</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/animations.html#manim_mindmap.animations.animations.AlterNode"><code class="docutils literal notranslate"><span class="pre">AlterNode</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/animations.html#id7">辅助函数</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/animations.html#manim_mindmap.animations.animations.animate_of_layout"><code class="docutils literal notranslate"><span class="pre">animate_of_layout()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/animations.html#manim_mindmap.animations.animations.fadeout_of_subtrees"><code class="docutils literal notranslate"><span class="pre">fadeout_of_subtrees()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/algorithms.html">算法模块 (manim_mindmap.algorithms)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/algorithms.html#id1">布局接口</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/algorithms.html#manim_mindmap.algorithms.tidy_tree.tidy_tree_layout"><code class="docutils literal notranslate"><span class="pre">tidy_tree_layout()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/algorithms.html#id2">布局算法类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/algorithms.html#manim_mindmap.algorithms.tidy_tree.TidyTreeLayout"><code class="docutils literal notranslate"><span class="pre">TidyTreeLayout</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/algorithms.html#id3">数据结构</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/algorithms.html#manim_mindmap.algorithms.tidy_tree.WrappedTree"><code class="docutils literal notranslate"><span class="pre">WrappedTree</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/algorithms.html#manim_mindmap.algorithms.tidy_tree.IYLNode"><code class="docutils literal notranslate"><span class="pre">IYLNode</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">manim-mindmap</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">模块代码</a></li>
+      <li class="breadcrumb-item active">manim_mindmap.nodes.node</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>manim_mindmap.nodes.node 源代码</h1><div class="highlight"><pre>
+<span></span><span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;Node&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;NodeSate&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;NodeStyle&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;dfs_walker&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;bfs_walker&#39;</span>
+<span class="p">]</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">deque</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Generator</span><span class="p">,</span><span class="n">List</span><span class="p">,</span><span class="n">Dict</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">manim.mobject.mobject</span><span class="w"> </span><span class="kn">import</span> <span class="n">Group</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">manim.mobject.types.vectorized_mobject</span><span class="w"> </span><span class="kn">import</span> <span class="n">VMobject</span><span class="p">,</span><span class="n">VGroup</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">manim.mobject.geometry.line</span><span class="w"> </span><span class="kn">import</span> <span class="n">Line</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">manim.mobject.geometry.polygram</span><span class="w"> </span><span class="kn">import</span> <span class="n">Rectangle</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">manim.constants</span><span class="w"> </span><span class="kn">import</span> <span class="n">LEFT</span><span class="p">,</span> <span class="n">RIGHT</span><span class="p">,</span> <span class="n">UP</span><span class="p">,</span> <span class="n">DOWN</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">manim.utils.color</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+    
+<div class="viewcode-block" id="NodeSate">
+<a class="viewcode-back" href="../../../api/nodes.html#manim_mindmap.nodes.node.NodeSate">[文档]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">NodeSate</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;节点状态&quot;&quot;&quot;</span>
+    <span class="n">INSERT</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># 新插入</span>
+    <span class="n">REMOVE</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># 待移除</span>
+    <span class="n">DISPLAY</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># 已显示</span>
+    <span class="n">SCALE</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># 待放大</span>
+    <span class="n">ALTER</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># 替换节点中的内容</span></div>
+
+
+<div class="viewcode-block" id="NodeStyle">
+<a class="viewcode-back" href="../../../api/nodes.html#manim_mindmap.nodes.node.NodeStyle">[文档]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">NodeStyle</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;整体布局参数,以及节点样式字典列表,按节点层级索引&#39;&#39;&#39;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">direction</span> <span class="o">=</span> <span class="n">RIGHT</span><span class="p">,</span>
+        <span class="n">level_spacing</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="n">node_spacing</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="n">node_style</span><span class="p">:</span><span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="n">RED</span><span class="p">,</span> <span class="s1">&#39;stroke_width&#39;</span><span class="p">:</span><span class="mi">8</span><span class="p">},</span>
+            <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="n">BLUE</span><span class="p">,</span> <span class="s1">&#39;stroke_width&#39;</span><span class="p">:</span><span class="mi">6</span><span class="p">},</span>
+            <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="n">YELLOW</span><span class="p">,</span> <span class="s1">&#39;stroke_width&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">},</span>
+            <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="n">GREEN</span><span class="p">,</span> <span class="s1">&#39;stroke_width&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">}</span>
+        <span class="p">],</span>
+        <span class="n">line_style</span><span class="p">:</span><span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="n">RED</span><span class="p">,</span> <span class="s1">&#39;stroke_width&#39;</span><span class="p">:</span><span class="mi">8</span><span class="p">},</span>
+            <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="n">BLUE</span><span class="p">,</span> <span class="s1">&#39;stroke_width&#39;</span><span class="p">:</span><span class="mi">6</span><span class="p">},</span>
+            <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="n">YELLOW</span><span class="p">,</span> <span class="s1">&#39;stroke_width&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">},</span>
+            <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="n">GREEN</span><span class="p">,</span> <span class="s1">&#39;stroke_width&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">}</span>
+        <span class="p">],</span>
+        <span class="n">text_style</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="n">RED</span><span class="p">,</span><span class="s1">&#39;font_size&#39;</span><span class="p">:</span><span class="mi">64</span><span class="p">},</span>
+            <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="n">YELLOW</span><span class="p">,</span><span class="s1">&#39;font_size&#39;</span><span class="p">:</span><span class="mi">56</span><span class="p">},</span>
+            <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="n">GREEN</span><span class="p">,</span><span class="s1">&#39;font_size&#39;</span><span class="p">:</span><span class="mi">48</span><span class="p">},</span>
+            <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="n">WHITE</span><span class="p">,</span><span class="s1">&#39;font_size&#39;</span><span class="p">:</span><span class="mi">36</span><span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">any</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">direction</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="p">[</span><span class="n">UP</span><span class="p">,</span> <span class="n">DOWN</span><span class="p">,</span> <span class="n">LEFT</span><span class="p">,</span> <span class="n">RIGHT</span><span class="p">]):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;direction must be one of </span><span class="si">{</span><span class="n">LEFT</span><span class="p">,</span><span class="n">RIGHT</span><span class="p">,</span><span class="n">UP</span><span class="p">,</span><span class="n">DOWN</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">direction</span> <span class="o">=</span> <span class="n">direction</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">level_spacing</span> <span class="o">=</span> <span class="n">level_spacing</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">node_spacing</span> <span class="o">=</span> <span class="n">node_spacing</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">node_num</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">node_style</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">node_num</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">node_style</span> <span class="o">=</span> <span class="n">node_style</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">node_style</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="n">YELLOW</span><span class="p">,</span> <span class="s1">&#39;stroke_width&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">}]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">node_num</span> <span class="o">=</span> <span class="mi">1</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">line_num</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">line_style</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">line_num</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">line_style</span> <span class="o">=</span> <span class="n">line_style</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">line_style</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="n">YELLOW</span><span class="p">,</span> <span class="s1">&#39;stroke_width&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">}]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">line_num</span> <span class="o">=</span> <span class="mi">1</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_num</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">text_style</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">text_num</span><span class="p">:</span> 
+            <span class="bp">self</span><span class="o">.</span><span class="n">text_style</span> <span class="o">=</span> <span class="n">text_style</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text_style</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="n">YELLOW</span><span class="p">,</span> <span class="s1">&#39;font_size&#39;</span><span class="p">:</span><span class="mi">36</span><span class="p">}]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text_num</span> <span class="o">=</span> <span class="mi">1</span>
+
+<div class="viewcode-block" id="NodeStyle.get_node_style">
+<a class="viewcode-back" href="../../../api/nodes.html#manim_mindmap.nodes.node.NodeStyle.get_node_style">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_node_style</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">level</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">level</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">node_num</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">node_style</span><span class="p">[</span><span class="n">level</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">node_style</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span></div>
+
+    
+<div class="viewcode-block" id="NodeStyle.get_line_style">
+<a class="viewcode-back" href="../../../api/nodes.html#manim_mindmap.nodes.node.NodeStyle.get_line_style">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_line_style</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">level</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">level</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">line_num</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">line_style</span><span class="p">[</span><span class="n">level</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">line_style</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span></div>
+
+    
+<div class="viewcode-block" id="NodeStyle.get_text_style">
+<a class="viewcode-back" href="../../../api/nodes.html#manim_mindmap.nodes.node.NodeStyle.get_text_style">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_text_style</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">level</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">level</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">text_num</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">text_style</span><span class="p">[</span><span class="n">level</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">text_style</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span></div>
+</div>
+
+
+<div class="viewcode-block" id="dfs_walker">
+<a class="viewcode-back" href="../../../api/nodes.html#manim_mindmap.nodes.node.dfs_walker">[文档]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">dfs_walker</span><span class="p">(</span><span class="n">root</span><span class="p">:</span> <span class="s1">&#39;Node&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Generator</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;深度优先,前序遍历:后进先出,用栈&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">root</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    <span class="n">stack</span> <span class="o">=</span> <span class="p">[</span><span class="n">root</span><span class="p">]</span>
+    <span class="k">while</span> <span class="n">stack</span><span class="p">:</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+        <span class="k">yield</span> <span class="n">node</span>
+        <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">children</span><span class="p">):</span>
+            <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">child</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="bfs_walker">
+<a class="viewcode-back" href="../../../api/nodes.html#manim_mindmap.nodes.node.bfs_walker">[文档]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">bfs_walker</span><span class="p">(</span><span class="n">root</span><span class="p">:</span> <span class="s1">&#39;Node&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Generator</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;广度优先,层序遍历:先进先出,用队列&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">root</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    <span class="n">queue</span> <span class="o">=</span> <span class="n">deque</span><span class="p">([</span><span class="n">root</span><span class="p">])</span>
+    <span class="k">while</span> <span class="n">queue</span><span class="p">:</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">popleft</span><span class="p">()</span>
+        <span class="k">yield</span> <span class="n">node</span>
+        <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+            <span class="n">queue</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">child</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Node">
+<a class="viewcode-back" href="../../../api/nodes.html#manim_mindmap.nodes.node.Node">[文档]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Node</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;树节点类&quot;&quot;&quot;</span>
+    <span class="n">direction</span> <span class="o">=</span> <span class="n">RIGHT</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">vmobject</span><span class="p">:</span><span class="n">VMobject</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">buff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vmobject</span> <span class="o">=</span> <span class="n">vmobject</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vmobject</span><span class="o">.</span><span class="n">height</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">buff</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vmobject</span><span class="o">.</span><span class="n">width</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">buff</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">buff</span> <span class="o">=</span> <span class="n">buff</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">surr_rect</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span>
+            <span class="n">width</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">,</span>
+            <span class="n">height</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parent</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">neighbor</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># 邻居节点</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">node_state</span> <span class="o">=</span> <span class="n">NodeSate</span><span class="o">.</span><span class="n">INSERT</span>  <span class="c1"># 节点状态</span>
+    
+<div class="viewcode-block" id="Node.scale">
+<a class="viewcode-back" href="../../../api/nodes.html#manim_mindmap.nodes.node.Node.scale">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">scale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scale_factor</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;缩放节点&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">node_state</span> <span class="o">=</span> <span class="n">NodeSate</span><span class="o">.</span><span class="n">SCALE</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scale_factor</span> <span class="o">=</span> <span class="n">scale_factor</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">*=</span> <span class="n">scale_factor</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">*=</span> <span class="n">scale_factor</span></div>
+
+    
+<div class="viewcode-block" id="Node.add_child">
+<a class="viewcode-back" href="../../../api/nodes.html#manim_mindmap.nodes.node.Node.add_child">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_child</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">child</span><span class="p">:</span> <span class="s1">&#39;Node&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;添加子节点&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+            <span class="n">child</span><span class="o">.</span><span class="n">neighbor</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">child</span><span class="o">.</span><span class="n">node_state</span> <span class="o">=</span> <span class="n">NodeSate</span><span class="o">.</span><span class="n">INSERT</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
+        <span class="n">child</span><span class="o">.</span><span class="n">parent</span> <span class="o">=</span> <span class="bp">self</span></div>
+
+
+<div class="viewcode-block" id="Node.remove_child">
+<a class="viewcode-back" href="../../../api/nodes.html#manim_mindmap.nodes.node.Node.remove_child">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">remove_child</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">child</span><span class="p">:</span> <span class="s1">&#39;Node&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;删除子节点&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">child</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Node </span><span class="si">{</span><span class="n">child</span><span class="si">}</span><span class="s2"> is not a child of </span><span class="si">{</span><span class="bp">self</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">child</span><span class="o">.</span><span class="n">node_state</span> <span class="o">=</span> <span class="n">NodeSate</span><span class="o">.</span><span class="n">REMOVE</span></div>
+
+
+<div class="viewcode-block" id="Node.alter_content">
+<a class="viewcode-back" href="../../../api/nodes.html#manim_mindmap.nodes.node.Node.alter_content">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">alter_content</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vmobject</span><span class="p">:</span> <span class="n">VMobject</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;替换节点内容&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">node_state</span> <span class="o">=</span> <span class="n">NodeSate</span><span class="o">.</span><span class="n">ALTER</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">alter_vmobject</span> <span class="o">=</span> <span class="n">vmobject</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">alter_vmobject</span><span class="o">.</span><span class="n">width</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">buff</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">alter_vmobject</span><span class="o">.</span><span class="n">height</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">buff</span></div>
+
+
+<div class="viewcode-block" id="Node.get_connector">
+<a class="viewcode-back" href="../../../api/nodes.html#manim_mindmap.nodes.node.Node.get_connector">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_connector</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">direction</span> <span class="o">=</span> <span class="n">RIGHT</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Line</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">direction</span><span class="p">,</span><span class="n">UP</span><span class="p">):</span>
+            <span class="n">start</span><span class="p">,</span><span class="n">end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">surr_rect</span><span class="o">.</span><span class="n">get_top</span><span class="p">(),</span><span class="bp">self</span><span class="o">.</span><span class="n">surr_rect</span><span class="o">.</span><span class="n">get_bottom</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">direction</span><span class="p">,</span><span class="n">DOWN</span><span class="p">):</span>
+            <span class="n">start</span><span class="p">,</span><span class="n">end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">surr_rect</span><span class="o">.</span><span class="n">get_bottom</span><span class="p">(),</span><span class="bp">self</span><span class="o">.</span><span class="n">surr_rect</span><span class="o">.</span><span class="n">get_top</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">direction</span><span class="p">,</span><span class="n">LEFT</span><span class="p">):</span>
+            <span class="n">start</span><span class="p">,</span><span class="n">end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">surr_rect</span><span class="o">.</span><span class="n">get_left</span><span class="p">(),</span><span class="bp">self</span><span class="o">.</span><span class="n">surr_rect</span><span class="o">.</span><span class="n">get_right</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">start</span><span class="p">,</span><span class="n">end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">surr_rect</span><span class="o">.</span><span class="n">get_right</span><span class="p">(),</span><span class="bp">self</span><span class="o">.</span><span class="n">surr_rect</span><span class="o">.</span><span class="n">get_left</span><span class="p">()</span>
+        <span class="n">vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">,</span><span class="n">direction</span><span class="p">)</span> <span class="o">*</span> <span class="n">direction</span><span class="o">*</span><span class="mf">0.5</span>
+        <span class="k">return</span> <span class="n">Line</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="n">start</span><span class="o">+</span><span class="n">vec</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span><span class="o">.</span><span class="n">add_line_to</span><span class="p">(</span><span class="n">end</span><span class="o">-</span><span class="n">vec</span><span class="p">)</span><span class="o">.</span><span class="n">add_line_to</span><span class="p">(</span><span class="n">end</span><span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="Node.set_connector">
+<a class="viewcode-back" href="../../../api/nodes.html#manim_mindmap.nodes.node.Node.set_connector">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_connector</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">direction</span> <span class="o">=</span> <span class="n">RIGHT</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;设置连接线&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="s1">&#39;connector&#39;</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">direction</span> <span class="o">=</span> <span class="n">direction</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">connector</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_connector</span><span class="p">(</span><span class="n">direction</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">connector</span><span class="o">.</span><span class="n">add_updater</span><span class="p">(</span><span class="k">lambda</span> <span class="n">m</span><span class="p">:</span> <span class="n">m</span><span class="o">.</span><span class="n">become</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_connector</span><span class="p">(</span><span class="n">direction</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)))</span></div>
+
+    
+<div class="viewcode-block" id="Node.change_connector">
+<a class="viewcode-back" href="../../../api/nodes.html#manim_mindmap.nodes.node.Node.change_connector">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">change_connector</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">direction</span> <span class="o">=</span> <span class="n">RIGHT</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;改变连接线&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="s1">&#39;connector&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="p">,</span><span class="n">direction</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">connector</span><span class="o">.</span><span class="n">remove_updater</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">connector</span><span class="o">.</span><span class="n">get_updaters</span><span class="p">())</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">direction</span> <span class="o">=</span> <span class="n">direction</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">connector</span><span class="o">.</span><span class="n">add_updater</span><span class="p">(</span><span class="k">lambda</span> <span class="n">m</span><span class="p">:</span> <span class="n">m</span><span class="o">.</span><span class="n">become</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_connector</span><span class="p">(</span><span class="n">direction</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)))</span></div>
+
+
+<div class="viewcode-block" id="Node.get_node_and_line_without_updater">
+<a class="viewcode-back" href="../../../api/nodes.html#manim_mindmap.nodes.node.Node.get_node_and_line_without_updater">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_node_and_line_without_updater</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Group</span><span class="p">:</span>
+        <span class="n">node_mobj</span> <span class="o">=</span> <span class="n">Group</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">surr_rect</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">vmobject</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="s1">&#39;connector&#39;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">connector</span><span class="o">.</span><span class="n">remove_updater</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">connector</span><span class="o">.</span><span class="n">get_updaters</span><span class="p">())</span>
+            <span class="n">node_mobj</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">connector</span><span class="p">)</span>
+            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">connector</span>
+        <span class="k">return</span> <span class="n">node_mobj</span></div>
+
+    
+<div class="viewcode-block" id="Node.get_children">
+<a class="viewcode-back" href="../../../api/nodes.html#manim_mindmap.nodes.node.Node.get_children">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_children</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="s1">&#39;Node&#39;</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;获取所有子节点&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span></div>
+
+    
+<div class="viewcode-block" id="Node.get_descendants">
+<a class="viewcode-back" href="../../../api/nodes.html#manim_mindmap.nodes.node.Node.get_descendants">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_descendants</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="s1">&#39;Node&#39;</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;获取所有子孙节点&quot;&quot;&quot;</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">descendants_of_node</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">Node</span><span class="p">,</span><span class="n">descendants</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Node</span><span class="p">]</span> <span class="o">=</span> <span class="p">[])</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">Node</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+                <span class="n">descendants</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">children</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">node_</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+                <span class="n">descendants_of_node</span><span class="p">(</span><span class="n">node_</span><span class="p">,</span><span class="n">descendants</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">descendants</span>
+        <span class="k">return</span> <span class="n">descendants_of_node</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="Node.get_children_mobjects">
+<a class="viewcode-back" href="../../../api/nodes.html#manim_mindmap.nodes.node.Node.get_children_mobjects">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_children_mobjects</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Group</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;获取所有子节点对象&quot;&quot;&quot;</span>
+        <span class="n">group</span> <span class="o">=</span> <span class="n">Group</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+            <span class="n">group</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">vmobject</span><span class="p">,</span><span class="n">node</span><span class="o">.</span><span class="n">surr_rect</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">group</span></div>
+
+    
+<div class="viewcode-block" id="Node.get_descendants_mobjects">
+<a class="viewcode-back" href="../../../api/nodes.html#manim_mindmap.nodes.node.Node.get_descendants_mobjects">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_descendants_mobjects</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Group</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;获取所有子孙节点对象&quot;&quot;&quot;</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">descendants_mobjects_of_node</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">Node</span><span class="p">,</span><span class="n">descendants</span><span class="p">:</span> <span class="n">Group</span> <span class="o">=</span> <span class="n">Group</span><span class="p">())</span> <span class="o">-&gt;</span> <span class="n">Group</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">node_</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+                <span class="n">descendants</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">node_</span><span class="o">.</span><span class="n">vmobject</span><span class="p">,</span><span class="n">node_</span><span class="o">.</span><span class="n">surr_rect</span><span class="p">)</span>
+                <span class="n">descendants_mobjects_of_node</span><span class="p">(</span><span class="n">node_</span><span class="p">,</span><span class="n">descendants</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">descendants</span>
+        <span class="k">return</span> <span class="n">descendants_mobjects_of_node</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="Node.get_root">
+<a class="viewcode-back" href="../../../api/nodes.html#manim_mindmap.nodes.node.Node.get_root">[文档]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_root</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Node&#39;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;获取根节点&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">get_root</span><span class="p">()</span></div>
+</div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2026, jj-math。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
