@@ -3,12 +3,6 @@
 
 该模块定义了思维导图的树节点类、节点样式和遍历函数。
 
-类继承关系
-----------
-
-.. inheritance-diagram:: manim_mindmap.nodes.node.Node
-   :parts: 1
-
 节点类
 ------
 

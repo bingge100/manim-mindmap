@@ -54,26 +54,6 @@ manim-mindmap 文档
 - **Layout**: 布局类，使用 Tidy Tree 算法计算节点位置
 - **动画类**: ``LayoutAnimation``, ``InsertNode``, ``RemoveNode``, ``ScaleNode``, ``AlterNode``
 
-整体架构
----------
-
-.. graphviz::
-
-   digraph overview {
-      rankdir=TB;
-      node [shape=box];
-      MindMap -> NodeStyle;
-      MindMap -> Layout;
-      Layout -> TidyTreeLayout;
-      TidyTreeLayout -> WrappedTree;
-      MindMap -> Node;
-      InsertNode -> Node;
-      RemoveNode -> Node;
-      ScaleNode -> Node;
-      AlterNode -> Node;
-   }
-
-
 索引
 =====
 

@@ -3,26 +3,6 @@
 
 该模块定义了思维导图的核心类：布局类和思维导图主类。
 
-类继承关系
-----------
-
-.. inheritance-diagram:: manim_mindmap.mindmap.layout.MindMap manim_mindmap.mindmap.layout.Layout
-   :parts: 1
-
-模块架构
---------
-
-.. graphviz::
-
-   digraph mindmap_arch {
-      rankdir=LR;
-      node [shape=box];
-      MindMap -> Layout;
-      MindMap -> NodeStyle;
-      Layout -> tidy_tree_layout;
-      tidy_tree_layout -> TidyTreeLayout;
-   }
-
 布局类
 ------
 

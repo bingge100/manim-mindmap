@@ -3,28 +3,6 @@
 
 该模块提供了思维导图的各种动画类，用于节点的插入、删除、缩放和替换等操作。
 
-类继承关系
-----------
-
-.. inheritance-diagram:: manim_mindmap.animations.animations.AbstractLayoutAnimation manim_mindmap.animations.animations.LayoutAnimation manim_mindmap.animations.animations.InsertNode manim_mindmap.animations.animations.RemoveNode manim_mindmap.animations.animations.ScaleNode manim_mindmap.animations.animations.AlterNode
-   :parts: 2
-
-动画类关系
-----------
-
-.. graphviz::
-
-   digraph anim_hierarchy {
-      rankdir=TB;
-      node [shape=box];
-      AnimationGroup -> AbstractLayoutAnimation;
-      AbstractLayoutAnimation -> LayoutAnimation;
-      LayoutAnimation -> InsertNode;
-      LayoutAnimation -> RemoveNode;
-      LayoutAnimation -> ScaleNode;
-      LayoutAnimation -> AlterNode;
-   }
-
 动画基类
 --------
 
