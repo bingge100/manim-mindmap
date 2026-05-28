@@ -16,8 +16,8 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.intersphinx',
     'sphinx.ext.autosummary',
-    'sphinx.ext.graphviz',
-    'sphinx.ext.inheritance_diagram',
+    # 'sphinx.ext.graphviz',
+    # 'sphinx.ext.inheritance_diagram',
     'sphinx.ext.extlinks',
 ]
 
@@ -78,7 +78,7 @@ inheritance_node_attrs = {
     'fontsize': '11',
     'fontname': '"Microsoft YaHei,SimHei,Arial,sans-serif"',
     'shape': 'box',
-    'style': '"rounded,filled"',
+    'style': 'rounded,filled',
     'fillcolor': '"#e8f4f8"',
     'color': '"#4a90a4"',
     'penwidth': '1.5',
