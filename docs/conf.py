@@ -19,8 +19,6 @@ extensions = [
     'sphinx.ext.extlinks',
     'sphinx.ext.graphviz',              # 生成类的继承关系图（需要安装 graphviz）
     'sphinx.ext.inheritance_diagram',   # 生成类的继承关系图
-    'sphinx_copybutton',                # 代码块添加一键复制按钮
-    'sphinx_design',                    # 设计组件（标签、警告框等）
 ]
 
 templates_path = ['_templates']
