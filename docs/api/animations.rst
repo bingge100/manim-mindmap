@@ -16,7 +16,7 @@
 
    digraph anim_hierarchy {
       rankdir=TB;
-      node [shape=box, style="rounded,filled", fillcolor="#f8f8f8", fontsize=11];
+      node [shape=box, style=rounded,filled, fillcolor="#f8f8f8", fontsize=11];
       AnimationGroup -> AbstractLayoutAnimation;
       AbstractLayoutAnimation -> LayoutAnimation;
       LayoutAnimation -> InsertNode;
