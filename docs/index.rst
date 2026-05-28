@@ -9,6 +9,7 @@ manim-mindmap 文档
    :maxdepth: 2
    :caption: 目录
 
+   hierarchy
    api/index
 
 

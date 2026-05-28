@@ -1,5 +1,50 @@
 /* 自定义CSS样式，用于美化图表显示 */
 
+/* Graphviz 图表样式 */
+.graphviz [class="node"] polygon {
+    fill: #e8f4fc !important;
+    stroke: #2980b9 !important;
+    stroke-width: 0.5 !important;
+}
+
+.graphviz [class="node"] text {
+    fill: #2980b9 !important;
+    font-family: "Microsoft YaHei", SimHei, sans-serif !important;
+}
+
+.graphviz [class="edge"] path {
+    stroke: #7f8c8d !important;
+    fill: none !important;
+    stroke-width: 0.5 !important;
+}
+
+.graphviz [class="edge"] polygon {
+    fill: #7f8c8d !important;
+    stroke: #7f8c8d !important;
+    stroke-width: 0.5 !important;
+}
+
+/* 深色模式 */
+@media (prefers-color-scheme: dark) {
+    .graphviz [class="node"] polygon {
+        fill: #383838 !important;
+        stroke: #d0d0d0 !important;
+    }
+
+    .graphviz [class="node"] text {
+        fill: #e07a5f !important;
+    }
+
+    .graphviz [class="edge"] path {
+        stroke: #d0d0d0 !important;
+    }
+
+    .graphviz [class="edge"] polygon {
+        fill: #d0d0d0 !important;
+        stroke: #d0d0d0 !important;
+    }
+}
+
 /* 响应式SVG图表 */
 svg.graphviz {
     max-width: 100%;
