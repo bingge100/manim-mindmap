@@ -52,19 +52,37 @@ language = 'zh_CN'
 graphviz_output_format = 'svg'
 
 graphviz_dot_args = [
-    '-Nfontname=sans-serif',
-    '-Efontname=sans-serif',
-    '-Gfontname=sans-serif',
+    '-Nfontname="Microsoft YaHei,SimHei,Arial,sans-serif"',
+    '-Efontname="Microsoft YaHei,SimHei,Arial,sans-serif"',
+    '-Gfontname="Microsoft YaHei,SimHei,Arial,sans-serif"',
+    '-Gdpi=96',
 ]
 
 inheritance_graph_attrs = {
-    'rankdir': 'LR',
-    'size': '"10,6"',
+    'rankdir': 'TB',
+    'size': '"12,8"',
+    'dpi': '96',
+    'bgcolor': 'transparent',
+    'nodesep': '0.8',
+    'ranksep': '0.6',
+    'fontname': '"Microsoft YaHei,SimHei,Arial,sans-serif"',
 }
 
 inheritance_node_attrs = {
-    'fontsize': 12,
+    'fontsize': '11',
+    'fontname': '"Microsoft YaHei,SimHei,Arial,sans-serif"',
     'shape': 'box',
     'style': '"rounded,filled"',
-    'fillcolor': '"#f8f8f8"',
+    'fillcolor': '"#e8f4f8"',
+    'color': '"#4a90a4"',
+    'penwidth': '1.5',
+    'margin': '"0.2,0.1"',
+}
+
+inheritance_edge_attrs = {
+    'color': '"#6c8ebf"',
+    'penwidth': '1.0',
+    'arrowsize': '0.8',
+    'fontname': '"Microsoft YaHei,SimHei,Arial,sans-serif"',
+    'fontsize': '9',
 }
