@@ -18,6 +18,7 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.graphviz',
     'sphinx.ext.inheritance_diagram',
+    'sphinx.ext.extlinks',
 ]
 
 templates_path = ['_templates']
@@ -49,6 +50,9 @@ master_doc = 'index'
 
 language = 'zh_CN'
 
+napoleon_google_docstring = True
+napoleon_numpy_docstring = True
+
 graphviz_output_format = 'svg'
 
 graphviz_dot_args = [
@@ -66,6 +70,8 @@ inheritance_graph_attrs = {
     'nodesep': '0.8',
     'ranksep': '0.6',
     'fontname': '"Microsoft YaHei,SimHei,Arial,sans-serif"',
+    'concentrate': True,
+    'splines': 'ortho',
 }
 
 inheritance_node_attrs = {
@@ -77,6 +83,8 @@ inheritance_node_attrs = {
     'color': '"#4a90a4"',
     'penwidth': '1.5',
     'margin': '"0.2,0.1"',
+    'width': '0.05',
+    'height': '0.05',
 }
 
 inheritance_edge_attrs = {
@@ -86,3 +94,5 @@ inheritance_edge_attrs = {
     'fontname': '"Microsoft YaHei,SimHei,Arial,sans-serif"',
     'fontsize': '9',
 }
+
+html_css_files = ['custom.css']

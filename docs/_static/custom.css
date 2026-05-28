@@ -1,0 +1,135 @@
+/* 自定义CSS样式，用于美化图表显示 */
+
+/* 响应式SVG图表 */
+svg.graphviz {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 图表容器样式 */
+.inheritance {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* 继承关系图标题 */
+.inheritance .caption {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+/* 图表链接样式 */
+.inheritance a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.inheritance a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* 代码块样式优化 */
+div.highlight {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+/* API文档样式优化 */
+dl.class, dl.function, dl.method {
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+dl.class > dt, dl.function > dt, dl.method > dt {
+    background-color: #e8f4f8;
+    color: #2c3e50;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin: -20px -20px 20px -20px;
+}
+
+/* 表格样式优化 */
+table.docutils {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+}
+
+table.docutils th,
+table.docutils td {
+    border: 1px solid #e9ecef;
+    padding: 12px;
+    text-align: left;
+}
+
+table.docutils th {
+    background-color: #e8f4f8;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+table.docutils tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* 警告框样式优化 */
+.admonition {
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin: 20px 0;
+}
+
+.admonition.note {
+    background-color: #e8f4f8;
+    border-left: 4px solid #3498db;
+}
+
+.admonition.warning {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+}
+
+.admonition.error {
+    background-color: #f8d7da;
+    border-left: 4px solid #dc3545;
+}
+
+/* 导航栏样式优化 */
+.wy-nav-side {
+    background-color: #2c3e50;
+}
+
+.wy-menu-vertical a {
+    color: #ecf0f1;
+}
+
+.wy-menu-vertical a:hover {
+    background-color: #34495e;
+}
+
+/* 搜索框样式优化 */
+.wy-side-nav-search {
+    background-color: #3498db;
+}
+
+.wy-side-nav-search input[type="text"] {
+    border-color: #2980b9;
+}
+
+/* 页脚样式优化 */
+.rst-footer-buttons {
+    margin-top: 30px;
+}
