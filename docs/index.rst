@@ -61,17 +61,16 @@ manim-mindmap 文档
 
    digraph overview {
       rankdir=TB;
-      node [shape=box, style="rounded,filled", fillcolor="#e8f4fd", fontsize=11];
-      edge [fontsize=9];
-      "MindMap" -> "NodeStyle" [label="style"];
-      "MindMap" -> "Layout" [label="layout"];
-      "Layout" -> "TidyTreeLayout" [label="algo"];
-      "TidyTreeLayout" -> "WrappedTree" [label="wrap"];
-      "MindMap" -> "Node" [label="build"];
-      "InsertNode" -> "Node" [label="insert"];
-      "RemoveNode" -> "Node" [label="remove"];
-      "ScaleNode" -> "Node" [label="scale"];
-      "AlterNode" -> "Node" [label="alter"];
+      node [shape=box];
+      MindMap -> NodeStyle;
+      MindMap -> Layout;
+      Layout -> TidyTreeLayout;
+      TidyTreeLayout -> WrappedTree;
+      MindMap -> Node;
+      InsertNode -> Node;
+      RemoveNode -> Node;
+      ScaleNode -> Node;
+      AlterNode -> Node;
    }
 
 
