@@ -16,11 +16,11 @@
 
    digraph mindmap_arch {
       rankdir=LR;
-      node [shape=box, style=rounded,filled, fillcolor="#f8f8f8", fontsize=11];
-      "MindMap" -> "Layout" [label=use];
-      "MindMap" -> "NodeStyle" [label=config];
-      "Layout" -> "tidy_tree_layout" [label=call];
-      "tidy_tree_layout" -> "TidyTreeLayout" [label=impl];
+      node [shape=box];
+      MindMap -> Layout;
+      MindMap -> NodeStyle;
+      Layout -> tidy_tree_layout;
+      tidy_tree_layout -> TidyTreeLayout;
    }
 
 布局类
