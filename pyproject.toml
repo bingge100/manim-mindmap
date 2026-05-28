@@ -14,10 +14,10 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/jj-math/manim-mindmap"
-Repository = "https://github.com/jj-math/manim-mindmap"
-Documentation = "https://github.com/jj-math/manim-mindmap#readme"
-"Bug Tracker" = "https://github.com/jj-math/manim-mindmap/issues"
+Homepage = "https://github.com/bingge100/manim-mindmap"
+Repository = "https://github.com/bingge100/manim-mindmap"
+Documentation = "https://bingge100.github.io/manim-mindmap/"
+"Bug Tracker" = "https://github.com/bingge100/manim-mindmap/issues"
 
 [tool.poetry]
 packages = [{include = "manim_mindmap", from = "src"}]
