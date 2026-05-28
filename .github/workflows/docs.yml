@@ -30,7 +30,8 @@ jobs:
           libpango1.0-dev \
           libglib2.0-dev \
           libharfbuzz-dev \
-          pkg-config
+          pkg-config \
+          graphviz
 
     - name: Set up Python
       uses: actions/setup-python@v4
